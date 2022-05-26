@@ -8,8 +8,10 @@
 	:global(body) {
 		background-color: #F1FEFF;
 		text-align: center;
-		padding: 1em;
+		padding: 0;
 		max-width: 50em;
 		margin: 0 auto;
+
+		height: 2200px;
 	}
 </style>
