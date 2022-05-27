@@ -7,7 +7,7 @@
     export let url="";
 </script>
 
-<Router url="{url}">
+<!-- <Router url="{url}">
     <nav>
         <Link to="/">Home</Link>
         <Link to="about">About</Link>
@@ -20,7 +20,7 @@
         <Route path="faq" component="{Faq}" /> 
         <Route path="/"><Home /></Route>
     </div>
-</Router>
+</Router> -->
 
 <style>
     nav {
@@ -28,7 +28,7 @@
         justify-content: space-between;
         position: sticky;
         padding: 10px 5em;
-        top: 0px;
+        top: 2em;
     }
     nav {
         color: #4392D3;
