@@ -1,19 +1,29 @@
+<svelte:head>
+  <link href="http://fonts.cdnfonts.com/css/fisherman" rel="stylesheet">
+</svelte:head>
+
 <script>
 	import Header from "./components/Header.svelte";
+	import Home from "./pages/Home.svelte";
 	import About from "./pages/About.svelte";
 	import Schedule from "./pages/Schedule.svelte";
 	import Speakers from "./pages/Speakers.svelte";
 	import Sponsors from "./pages/Sponsors.svelte";
 	import Faq from "./pages/Faq.svelte";
+
+	let y;
 </script>
 
-<Header />
+<svelte:window bind:scrollY={y}/>
 
-<About />
-<Schedule />
-<Speakers />
-<Sponsors />
-<Faq />
+<Header {y}/>
+
+<Home {y}/>
+<About {y}/>
+<Schedule {y}/>
+<Speakers {y}/>
+<Faq {y}/>
+<Sponsors {y}/>
 
 <style>
 	:global(body) {
@@ -22,6 +32,9 @@
 		padding: 0;
 		margin: 0 auto;
 		border: 0;
+		font-family: 'Fisherman', sans-serif;
+		position: relative;
+		line-height: 1.5;
 	}
 
 	:global(.center) {

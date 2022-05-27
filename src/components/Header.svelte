@@ -1,36 +1,41 @@
 <script>
     import { Router, Link, Route } from "svelte-routing";
-    import Home from "../pages/Home.svelte";
-    import About from "../pages/About.svelte";
-    import Schedule from "../pages/Schedule.svelte";
-    import Faq from "../pages/Faq.svelte";
-    export let url="";
+    export let y;
+
+    function handleClick(page) {
+        console.log("clicked to", page);
+        window.scrollTo({
+            top: 1000,
+            left: 0,
+            behavior: "smooth"
+        });
+    }
 </script>
 
-<!-- <Router url="{url}">
-    <nav>
-        <Link to="/">Home</Link>
-        <Link to="about">About</Link>
-        <Link to="schedule">Schedule</Link>
-        <Link to="faq">FAQ</Link>
-    </nav>
-    <div>
-        <Route path="about" component="{About}" /> 
-        <Route path="schedule" component="{Schedule}" /> 
-        <Route path="faq" component="{Faq}" /> 
-        <Route path="/"><Home /></Route>
-    </div>
-</Router> -->
+<div id="header">
+    <Router>
+        <Link to="about" class="headerLink" on:click={() => handleClick("about")}>About</Link>
+        <Link to="schedule" class="headerLink" on:click={() => handleClick("schedule")}>Schedule</Link>
+        <Link to="speakers" class="headerLink" on:click={() => handleClick("speakers")}>Speakers</Link>
+        <Link to="faq" class="headerLink" on:click={() => handleClick("faq")}>FAQ</Link>
+        <Link to="sponsors" class="headerLink" on:click={() => handleClick("sponsors")}>Sponsors</Link>
+        <div class="headerLink"></div>
+    </Router>
+</div>
 
 <style>
-    nav {
+    #header {
+        background-color: lightcoral;
         display: flex;
-        justify-content: space-between;
-        position: sticky;
-        padding: 10px 5em;
-        top: 2em;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        padding: 30px 0;
     }
-    nav {
-        color: #4392D3;
+
+    .headerLink {
+        font-weight: 400;
+        font-size: 28px;
     }
 </style>

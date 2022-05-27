@@ -1,5 +1,9 @@
+<script>
+    export let y;
+</script>
+
 <div id="schedule">
-    <div class="center">This is Schedule page</div>
+    <div class="center">This is Schedule page {y} px</div>
 </div>
 
 <style>

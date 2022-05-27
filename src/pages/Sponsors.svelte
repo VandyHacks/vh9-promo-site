@@ -1,5 +1,9 @@
+<script>
+    export let y;
+</script>
+
 <div id="sponsors">
-    <div class="center">This is sponsors page</div>
+    <div class="center">This is sponsors page {y} px</div>
 </div>
 
 <style>

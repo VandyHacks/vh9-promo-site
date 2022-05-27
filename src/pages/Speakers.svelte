@@ -1,5 +1,9 @@
+<script>
+    export let y;
+</script>
+
 <div id="speakers">
-    <div class="center">This is Speakers page</div>
+    <div class="center">This is Speakers page {y} px</div>
 </div>
 
 <style>
