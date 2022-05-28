@@ -3,20 +3,26 @@
 </svelte:head>
 
 <script>
-	import Header from "./components/Header.svelte";
+	import Navbar from "./components/Navbar.svelte";
 	import Home from "./pages/Home.svelte";
 	import About from "./pages/About.svelte";
 	import Schedule from "./pages/Schedule.svelte";
 	import Speakers from "./pages/Speakers.svelte";
-	import Sponsors from "./pages/Sponsors.svelte";
 	import Faq from "./pages/Faq.svelte";
-
+	import Sponsors from "./pages/Sponsors.svelte";
+	
 	let y;
+	$: innerHeight = 0;
+	
+	
+	// import { onMount } from 'svelte';
+    // let url = ``;
+    // onMount(() => url = window.location.href);
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerHeight/>
 
-<Header {y}/>
+<Navbar {y} {innerHeight}/>
 
 <Home {y}/>
 <About {y}/>
