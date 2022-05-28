@@ -43,6 +43,11 @@
 		line-height: 1.5;
 	}
 
+	@font-face{
+  		font-family: 'Fisherman';
+  		src: url('/fonts/Fisherman.otf') format('Fisherman');
+	}
+
 	:global(.center) {
         position: absolute;
         top: 50%;
