@@ -1,17 +1,17 @@
 <script>
-    export let y;
+	export let y;
 </script>
 
 <div id="faq">
-    <div class="center">This is FAQ page {y} px</div>
+	<div class="center">This is FAQ page {y} px</div>
 </div>
 
 <style>
-    #faq {
-        background-color: rgb(239, 249, 96);
-        height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
+	#faq {
+		background-color: rgb(239, 249, 96);
+		height: 100vh;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
 </style>
