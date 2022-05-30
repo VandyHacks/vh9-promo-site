@@ -1,9 +1,12 @@
 <script>
+	import DiveDeeper from "../components/DiveDeeper.svelte";
 	export let y;
 </script>
 
 <div id="faq">
 	<div class="center">This is FAQ page {y} px</div>
+
+	<DiveDeeper />
 </div>
 
 <style>

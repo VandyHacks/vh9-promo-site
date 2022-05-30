@@ -10,7 +10,7 @@
 	onMount(() => {
 		let url = window.location.href;
 		let page = url.split("/")[3].toLocaleLowerCase();
-		navigateTo(pageOrder[page]);
+		if (pageOrder[page]) navigateTo(pageOrder[page]);
 	});
 
 	function navigateTo(target) {
@@ -53,7 +53,6 @@
 
 <style>
 	#navbar-top {
-		background-color: lightcoral;
 		display: flex;
 		justify-content: space-around;
 		position: absolute;
@@ -72,7 +71,8 @@
 	}
 
 	#navbar-top > :global(a) {
-		color: white;
+		color: var(--beach-text);
+		font-size: 1.5em;
 	}
 
 	#submarine-container {
