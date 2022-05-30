@@ -1,6 +1,6 @@
 <script>
 	import DiveDeeper from "../components/DiveDeeper.svelte";
-	import MainLogo from "../components/MainLogo.svelte";
+	import MainLogo from "../components/svgs/MainLogo.svelte";
 	export let y;
 </script>
 
@@ -13,7 +13,15 @@
 		<div style="font-size: 24px; font-family: Futura; white-space: nowrap;">
 			October 21 - 23 | Nashville, TN
 		</div>
-		<div class="apply-button">Apply</div>
+		<div id="apply-button">Apply</div>
+		<div id="social-media">
+			<div>Hi</div>
+			<div>Hi</div>
+			<div>Hi</div>
+			<div>Hi</div>
+			<div>Hi</div>
+			<div>Hi</div>
+		</div>
 	</div>
 
 	<svg viewbox="0 0 100 20">
@@ -33,11 +41,11 @@
 		position: relative;
 	}
 
-	.apply-button {
+	#apply-button {
+		background-color: var(--beach-text);
+		color: white;
 		font-size: 30px;
 		font-family: Futura;
-		color: black;
-		background-color: white;
 		width: 200px;
 		margin: 20px auto 0 auto;
 		border-radius: 10px;
@@ -45,8 +53,16 @@
 		box-shadow: 2px 5px 5px grey;
 	}
 
-	.apply-button:hover {
+	#apply-button:hover {
 		cursor: pointer;
+	}
+
+	#social-media {
+		display: flex;
+		flex-direction: row;
+		width: 30vw;
+		background-color: pink;
+		margin: 30px auto 0 auto;
 	}
 
 	svg {

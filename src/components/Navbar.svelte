@@ -1,9 +1,13 @@
 <script>
 	import { Router, Link } from "svelte-routing";
 	import { onMount } from "svelte";
-	import { fade } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
+	import MediaQuery from "../MediaQuery.svelte";
+	import Hamburger from "../components/svgs/Hamburger.svelte";
+	import CrossCircle from "../components/svgs/CrossCircle.svelte";
 	export let y;
 	export let innerHeight;
+	let navbarOpen = false;
 	let pageOrder = { about: 1, schedule: 2, speakers: 3, faq: 4, sponsors: 5 };
 
 	// Navigate to section specified by page url, if available. Otherwise, remain at the top.
@@ -20,36 +24,104 @@
 				left: 0,
 				behavior: "smooth",
 			});
+			navbarOpen = false;
 		}, 250);
+	}
+
+	function openNavbar() {
+		navbarOpen = true;
+	}
+
+	function closeNavbar() {
+		navbarOpen = false;
 	}
 </script>
 
-<div id="navbar-top">
-	<Router>
-		<Link to="about" on:click={() => navigateTo(pageOrder["about"])}
-			>About</Link
-		>
-		<Link to="schedule" on:click={() => navigateTo(pageOrder["schedule"])}
-			>Schedule</Link
-		>
-		<Link to="speakers" on:click={() => navigateTo(pageOrder["speakers"])}
-			>Speakers</Link
-		>
-		<Link to="faq" on:click={() => navigateTo(pageOrder["faq"])}>FAQ</Link>
-		<Link to="sponsors" on:click={() => navigateTo(pageOrder["sponsors"])}
-			>Sponsors</Link
-		>
-		<div />
-	</Router>
-</div>
-
-{#if y >= innerHeight / 2}
-	<div id="navbar-side" transition:fade>
-		<div id="submarine-container">
-			<div class="center">Submarine buddy goes here</div>
+<!-- Default -->
+<MediaQuery query="(min-width: 481px)" let:matches>
+	{#if matches}
+		<div id="navbar-top">
+			<Router>
+				<Link to="about" on:click={() => navigateTo(pageOrder["about"])}
+					>About</Link
+				>
+				<Link
+					to="schedule"
+					on:click={() => navigateTo(pageOrder["schedule"])}
+					>Schedule</Link
+				>
+				<Link
+					to="speakers"
+					on:click={() => navigateTo(pageOrder["speakers"])}
+					>Speakers</Link
+				>
+				<Link to="faq" on:click={() => navigateTo(pageOrder["faq"])}
+					>FAQ</Link
+				>
+				<Link
+					to="sponsors"
+					on:click={() => navigateTo(pageOrder["sponsors"])}
+					>Sponsors</Link
+				>
+				<div />
+			</Router>
 		</div>
-	</div>
-{/if}
+
+		{#if y >= innerHeight / 2}
+			<div id="navbar-side" transition:fade>
+				<div id="submarine-container">
+					<div class="center">Submarine buddy goes here</div>
+				</div>
+			</div>
+		{/if}
+	{/if}
+</MediaQuery>
+
+<!-- Mobile -->
+<MediaQuery query="(max-width: 480px)" let:matches>
+	{#if matches}
+		<div id="hamburger" on:click={openNavbar}>
+			<Hamburger />
+		</div>
+		{#if navbarOpen}
+			<div id="navbar-mobile" transition:fly={{ duration: 200, x: -200 }}>
+				<div id="close-button" on:click={closeNavbar}>
+					<CrossCircle />
+				</div>
+				<div id="navbar-mobile-container">
+					<Router>
+						<Link
+							to="about"
+							on:click={() => navigateTo(pageOrder["about"])}
+							>About</Link
+						>
+						<Link
+							to="schedule"
+							on:click={() => navigateTo(pageOrder["schedule"])}
+							>Schedule</Link
+						>
+						<Link
+							to="speakers"
+							on:click={() => navigateTo(pageOrder["speakers"])}
+							>Speakers</Link
+						>
+						<Link
+							to="faq"
+							on:click={() => navigateTo(pageOrder["faq"])}
+							>FAQ</Link
+						>
+						<Link
+							to="sponsors"
+							on:click={() => navigateTo(pageOrder["sponsors"])}
+							>Sponsors</Link
+						>
+						<div />
+					</Router>
+				</div>
+			</div>
+		{/if}
+	{/if}
+</MediaQuery>
 
 <style>
 	#navbar-top {
@@ -82,5 +154,42 @@
 		transform: translateY(-50%);
 		width: 100%;
 		height: 50%;
+	}
+
+	#hamburger {
+		position: fixed;
+		z-index: 1;
+		top: 30px;
+		left: 30px;
+	}
+
+	#navbar-mobile {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 60vw;
+		height: 100%;
+		background-color: white;
+		border-radius: 5px;
+		box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	#navbar-mobile-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 100px 0 0 30px;
+		font-size: 28px;
+		text-align: start;
+		color: black;
+	}
+
+	#close-button {
+		position: absolute;
+		/* background-color: pink; */
+		top: 30px;
+		right: 20px;
+		transform: scale(1.5);
 	}
 </style>
