@@ -1,20 +1,14 @@
 <script>
 	import { pageOrder, innerHeightVal } from "../stores.js";
+	import { navigateTo } from "./Navbar.svelte";
 	export let currentPage;
-
-	function navigateTo(target) {
-		setTimeout(() => {
-			window.scrollTo({
-				top: $innerHeightVal * target,
-				left: 0,
-				behavior: "smooth",
-			});
-		}, 250);
-	}
 </script>
 
-<div id="dive-deeper" on:click={navigateTo($pageOrder[currentPage] + 1)}>
-	<div id="dive-deeper-button">
+<div id="dive-deeper">
+	<div
+		id="dive-deeper-button"
+		on:click={navigateTo($pageOrder[currentPage] + 1)}
+	>
 		<div id="text">Dive Deeper</div>
 		<div id="arrow">
 			<ul>

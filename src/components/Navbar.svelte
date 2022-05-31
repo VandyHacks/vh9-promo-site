@@ -16,15 +16,15 @@
 		if ($pageOrder[page]) navigateTo($pageOrder[page]);
 	});
 
-	function navigateTo(target) {
+	export function navigateTo(pageOrderNumber = 0) {
 		setTimeout(() => {
 			navbarOpen = false;
 			window.scrollTo({
-				top: $innerHeightVal * target,
+				top: $innerHeightVal * pageOrderNumber,
 				left: 0,
 				behavior: "smooth",
 			});
-		}, 250);
+		}, 150);
 	}
 
 	function openNavbar() {
