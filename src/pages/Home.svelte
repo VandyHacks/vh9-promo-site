@@ -6,7 +6,9 @@
 
 <div id="home">
 	<div class="center beach" style="color: var(--beach-text);">
-		<MainLogo />
+		<div>
+			<MainLogo />
+		</div>
 		<div style="font-size: 42px; white-space: nowrap; padding-top: 10px;">
 			VANDYHACKS IX
 		</div>
@@ -29,7 +31,7 @@
 		<path d="M0 30 V12 Q30 20 55 12 T100 11 V30z" />
 	</svg>
 
-	<DiveDeeper />
+	<DiveDeeper currentPage="home" />
 </div>
 
 <style>

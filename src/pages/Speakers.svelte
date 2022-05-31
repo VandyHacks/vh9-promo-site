@@ -6,7 +6,7 @@
 <div id="speakers">
 	<div class="center">This is Speakers page {y} px</div>
 
-	<DiveDeeper />
+	<DiveDeeper currentPage="speakers" />
 </div>
 
 <style>

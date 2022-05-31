@@ -2,29 +2,28 @@
 	import { Router, Link } from "svelte-routing";
 	import { onMount } from "svelte";
 	import { fade, fly } from "svelte/transition";
+	import { pageOrder, innerHeightVal } from "../stores.js";
 	import MediaQuery from "../MediaQuery.svelte";
 	import Hamburger from "../components/svgs/Hamburger.svelte";
 	import CrossCircle from "../components/svgs/CrossCircle.svelte";
 	export let y;
-	export let innerHeight;
 	let navbarOpen = false;
-	let pageOrder = { about: 1, schedule: 2, speakers: 3, faq: 4, sponsors: 5 };
 
 	// Navigate to section specified by page url, if available. Otherwise, remain at the top.
 	onMount(() => {
 		let url = window.location.href;
 		let page = url.split("/")[3].toLocaleLowerCase();
-		if (pageOrder[page]) navigateTo(pageOrder[page]);
+		if ($pageOrder[page]) navigateTo($pageOrder[page]);
 	});
 
 	function navigateTo(target) {
 		setTimeout(() => {
+			navbarOpen = false;
 			window.scrollTo({
-				top: innerHeight * target,
+				top: $innerHeightVal * target,
 				left: 0,
 				behavior: "smooth",
 			});
-			navbarOpen = false;
 		}, 250);
 	}
 
@@ -42,32 +41,33 @@
 	{#if matches}
 		<div id="navbar-top">
 			<Router>
-				<Link to="about" on:click={() => navigateTo(pageOrder["about"])}
-					>About</Link
+				<Link
+					to="about"
+					on:click={() => navigateTo($pageOrder["about"])}>About</Link
 				>
 				<Link
 					to="schedule"
-					on:click={() => navigateTo(pageOrder["schedule"])}
+					on:click={() => navigateTo($pageOrder["schedule"])}
 					>Schedule</Link
 				>
 				<Link
 					to="speakers"
-					on:click={() => navigateTo(pageOrder["speakers"])}
+					on:click={() => navigateTo($pageOrder["speakers"])}
 					>Speakers</Link
 				>
-				<Link to="faq" on:click={() => navigateTo(pageOrder["faq"])}
+				<Link to="faq" on:click={() => navigateTo($pageOrder["faq"])}
 					>FAQ</Link
 				>
 				<Link
 					to="sponsors"
-					on:click={() => navigateTo(pageOrder["sponsors"])}
+					on:click={() => navigateTo($pageOrder["sponsors"])}
 					>Sponsors</Link
 				>
 				<div />
 			</Router>
 		</div>
 
-		{#if y >= innerHeight / 2}
+		{#if y >= $innerHeightVal / 2}
 			<div id="navbar-side" transition:fade>
 				<div id="submarine-container">
 					<div class="center">Submarine buddy goes here</div>
