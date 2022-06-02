@@ -1,3 +1,18 @@
+<script context="module">
+	import { get } from "svelte/store";
+	import { isNavbarOpen } from "../stores.js";
+	export function navigateTo(pageOrderNumber = 0) {
+		setTimeout(() => {
+			isNavbarOpen.set(false);
+			window.scrollTo({
+				top: get(innerHeightVal) * pageOrderNumber,
+				left: 0,
+				behavior: "smooth",
+			});
+		}, 150);
+	}
+</script>
+
 <script>
 	import { Router, Link } from "svelte-routing";
 	import { onMount } from "svelte";
@@ -7,7 +22,6 @@
 	import Hamburger from "../components/svgs/Hamburger.svelte";
 	import CrossCircle from "../components/svgs/CrossCircle.svelte";
 	export let y;
-	let navbarOpen = false;
 
 	// Navigate to section specified by page url, if available. Otherwise, remain at the top.
 	onMount(() => {
@@ -16,23 +30,12 @@
 		if ($pageOrder[page]) navigateTo($pageOrder[page]);
 	});
 
-	export function navigateTo(pageOrderNumber = 0) {
-		setTimeout(() => {
-			navbarOpen = false;
-			window.scrollTo({
-				top: $innerHeightVal * pageOrderNumber,
-				left: 0,
-				behavior: "smooth",
-			});
-		}, 150);
-	}
-
 	function openNavbar() {
-		navbarOpen = true;
+		isNavbarOpen.set(true);
 	}
 
 	function closeNavbar() {
-		navbarOpen = false;
+		isNavbarOpen.set(false);
 	}
 </script>
 
@@ -83,7 +86,7 @@
 		<div id="hamburger" on:click={openNavbar}>
 			<Hamburger />
 		</div>
-		{#if navbarOpen}
+		{#if $isNavbarOpen}
 			<div id="navbar-mobile" transition:fly={{ duration: 200, x: -200 }}>
 				<div id="close-button" on:click={closeNavbar}>
 					<CrossCircle />
@@ -92,27 +95,27 @@
 					<Router>
 						<Link
 							to="about"
-							on:click={() => navigateTo(pageOrder["about"])}
+							on:click={() => navigateTo($pageOrder["about"])}
 							>About</Link
 						>
 						<Link
 							to="schedule"
-							on:click={() => navigateTo(pageOrder["schedule"])}
+							on:click={() => navigateTo($pageOrder["schedule"])}
 							>Schedule</Link
 						>
 						<Link
 							to="speakers"
-							on:click={() => navigateTo(pageOrder["speakers"])}
+							on:click={() => navigateTo($pageOrder["speakers"])}
 							>Speakers</Link
 						>
 						<Link
 							to="faq"
-							on:click={() => navigateTo(pageOrder["faq"])}
+							on:click={() => navigateTo($pageOrder["faq"])}
 							>FAQ</Link
 						>
 						<Link
 							to="sponsors"
-							on:click={() => navigateTo(pageOrder["sponsors"])}
+							on:click={() => navigateTo($pageOrder["sponsors"])}
 							>Sponsors</Link
 						>
 						<div />

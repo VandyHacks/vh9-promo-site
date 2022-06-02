@@ -1,7 +1,13 @@
 <script>
 	import DiveDeeper from "../components/DiveDeeper.svelte";
 	import MainLogo from "../components/svgs/MainLogo.svelte";
+	import { isAnimationOn } from "../stores.js";
+	import MediaQuery from "../MediaQuery.svelte";
 	export let y;
+
+	function toggleAnimation() {
+		isAnimationOn.set(!$isAnimationOn);
+	}
 </script>
 
 <div id="home">
@@ -30,6 +36,17 @@
 		<path opacity="0.5" d="M0 30 V12 Q30 0 55 12 T100 11 V30z" />
 		<path d="M0 30 V12 Q30 20 55 12 T100 11 V30z" />
 	</svg>
+
+	<MediaQuery query="(min-width: 481px)" let:matches>
+		{#if matches}
+			<button
+				id="animation-toggle"
+				class={$isAnimationOn ? "on" : "off"}
+				role="switch"
+				on:click={toggleAnimation}
+			/>
+		{/if}
+	</MediaQuery>
 
 	<DiveDeeper currentPage="home" />
 </div>
@@ -65,6 +82,75 @@
 		width: 30vw;
 		background-color: pink;
 		margin: 30px auto 0 auto;
+	}
+
+	#animation-toggle {
+		border: 0;
+		border-radius: 50px;
+		position: absolute;
+		z-index: 3;
+		bottom: 15px;
+		left: 15px;
+		width: 70px;
+		height: 40px;
+	}
+
+	.on {
+		background-color: #26305d;
+	}
+
+	.off {
+		background-color: #8e8e8e;
+	}
+
+	.on::before,
+	.off::before {
+		position: absolute;
+		content: "";
+		border-radius: 50%;
+		background: #fff;
+		top: 50%;
+		/* transform: translateY(-50%); */
+		/* right: 5px; */
+		width: 40%;
+		height: 70%;
+	}
+
+	.on::before {
+		-webkit-transform: translateX(-26px);
+		-ms-transform: translateX(26px);
+		transform: translateY(-50%);
+		transition: 200ms;
+	}
+
+	.off::before {
+		-webkit-transform: translateX(-26px);
+		-ms-transform: translateX(-26px);
+		transform: translateX(-26px) translateY(-50%);
+		transition: 200ms;
+	}
+
+	.on::after,
+	.off::after {
+		position: absolute;
+		font-size: 1.5em;
+		color: white;
+		white-space: nowrap;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 80px;
+	}
+
+	.on::after {
+		content: "Animations ON";
+	}
+
+	.off::after {
+		content: "Animations OFF";
+	}
+
+	#animation-toggle:hover {
+		cursor: pointer;
 	}
 
 	svg {

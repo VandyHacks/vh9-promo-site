@@ -1,5 +1,5 @@
 <script>
-	import { pageOrder, innerHeightVal } from "../stores.js";
+	import { pageOrder } from "../stores.js";
 	import { navigateTo } from "./Navbar.svelte";
 	export let currentPage;
 </script>
