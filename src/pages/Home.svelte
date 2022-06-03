@@ -12,26 +12,23 @@
 
 <div id="home">
 	<div class="center beach" style="color: var(--beach-text);">
-		<div>
+		<div id="main-logo">
 			<MainLogo />
 		</div>
-		<div style="font-size: 42px; white-space: nowrap; padding-top: 10px;">
-			VANDYHACKS IX
-		</div>
-		<div style="font-size: 24px; font-family: Futura; white-space: nowrap;">
-			October 21 - 23 | Nashville, TN
-		</div>
+		<div id="title">VANDYHACKS IX</div>
+		<div id="date">October 21 - 23 | Nashville, TN</div>
 		<div id="apply-button">Apply</div>
 		<div id="social-media">
-			<div>Hi</div>
-			<div>Hi</div>
-			<div>Hi</div>
-			<div>Hi</div>
-			<div>Hi</div>
-			<div>Hi</div>
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
+			<div />
 		</div>
 	</div>
 
+	<!-- Wave -->
 	<svg viewbox="0 0 100 20">
 		<path opacity="0.5" d="M0 30 V12 Q30 0 55 12 T100 11 V30z" />
 		<path d="M0 30 V12 Q30 20 55 12 T100 11 V30z" />
@@ -74,14 +71,6 @@
 
 	#apply-button:hover {
 		cursor: pointer;
-	}
-
-	#social-media {
-		display: flex;
-		flex-direction: row;
-		width: 30vw;
-		background-color: pink;
-		margin: 30px auto 0 auto;
 	}
 
 	#animation-toggle {
@@ -199,5 +188,42 @@
 		100% {
 			d: path("M0 30 V12 Q30 20 55 12 T100 11 V30z");
 		}
+	}
+
+	#main-logo {
+		width: max(20vh, 11vw);
+		margin: 0 auto;
+	}
+
+	#title {
+		font-size: max(5vh, 3vw);
+		white-space: nowrap;
+		padding-top: 1vh;
+	}
+
+	#date {
+		font-size: max(2.5vh, 1.5vw);
+		font-family: Futura;
+		white-space: nowrap;
+	}
+
+	#social-media {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 30px auto 0 auto;
+	}
+
+	#social-media > div {
+		border: 2px solid var(--beach-text);
+		background-color: var(--beach-text);
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+		margin: 0 5px;
+	}
+
+	#social-media > div:hover {
+		cursor: pointer;
 	}
 </style>
