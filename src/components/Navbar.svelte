@@ -152,7 +152,7 @@
 
 	#submarine-container {
 		position: absolute;
-		background-color: aquamarine;
+		border: 5px solid aquamarine;
 		top: 50%;
 		transform: translateY(-50%);
 		width: 100%;

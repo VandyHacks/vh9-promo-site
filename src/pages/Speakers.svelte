@@ -11,7 +11,10 @@
 
 <style>
 	#speakers {
-		background-color: rgb(181, 169, 255);
+		background: linear-gradient(to bottom, #8fc9cf, #5f8094 100%);
+		background: -o-linear-gradient(to bottom, #8fc9cf, #5f8094 100%);
+		background: -moz-linear-gradient(to bottom, #8fc9cf, #5f8094 100%);
+		background: -webkit-linear-gradient(to bottom, #8fc9cf, #5f8094 100%);
 		height: 100vh;
 		width: 100%;
 		margin: 0 auto;
