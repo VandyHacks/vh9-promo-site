@@ -29,7 +29,7 @@
 	</div>
 
 	<!-- Wave -->
-	<svg viewbox="0 0 100 20">
+	<svg viewbox="0 0 100 20" class={$isAnimationOn ? "animate-wave" : ""}>
 		<path opacity="0.5" d="M0 30 V12 Q30 0 55 12 T100 11 V30z" />
 		<path d="M0 30 V12 Q30 20 55 12 T100 11 V30z" />
 	</svg>
@@ -158,11 +158,11 @@
 		animation-duration: 10s;
 	}
 
-	svg > path:nth-child(1) {
+	.animate-wave > path:nth-child(1) {
 		animation-name: oceanWave1;
 	}
 
-	svg > path:nth-child(2) {
+	.animate-wave > path:nth-child(2) {
 		animation-name: oceanWave2;
 	}
 
