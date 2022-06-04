@@ -21,4 +21,8 @@
 		position: relative;
 		color: white;
 	}
+
+	#faq > * {
+		z-index: 1;
+	}
 </style>

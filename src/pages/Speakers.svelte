@@ -19,5 +19,10 @@
 		width: 100%;
 		margin: 0 auto;
 		position: relative;
+		color: white;
+	}
+
+	#speakers > * {
+		z-index: 1;
 	}
 </style>

@@ -4,8 +4,6 @@
 
 <div id="sponsors">
 	<div class="center">This is sponsors page {y} px</div>
-
-	<div id="ground" />
 </div>
 
 <style>
@@ -21,11 +19,7 @@
 		color: white;
 	}
 
-	#ground {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		height: 12vh;
-		background-color: black;
+	#sponsors > * {
+		z-index: 1;
 	}
 </style>

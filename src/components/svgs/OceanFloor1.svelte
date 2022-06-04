@@ -1,11 +1,20 @@
 <script>
+	import { isAnimationOn } from "../../stores.js";
+	export let topVal;
 	export let color;
+	export let y;
+	export let scrollSpeed = 1;
+	let translateAmount = 0;
+	$: y, (translateAmount = (topVal - y) * scrollSpeed);
 </script>
 
 <svg
+	style="top: {topVal}px; {$isAnimationOn
+		? `transform: translateY(${translateAmount}px)`
+		: ''}"
 	width="100%"
-	height="100%"
-	viewBox="0 0 375 300"
+	height="200vh"
+	viewBox="0 0 375 600"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
 	preserveAspectRatio="none"
@@ -15,3 +24,10 @@
 		fill={color}
 	/>
 </svg>
+
+<style>
+	svg {
+		position: absolute;
+		left: 0;
+	}
+</style>
