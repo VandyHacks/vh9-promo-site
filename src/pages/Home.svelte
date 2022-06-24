@@ -9,8 +9,7 @@
 	import LogoDiscord from "../components/svgs/Logos/LogoDiscord.svelte";
 	import LogoTwitter from "../components/svgs/Logos/LogoTwitter.svelte";
 	import LogoFacebook from "../components/svgs/Logos/LogoFacebook.svelte";
-	import Seashell from "../components/svgs/Seashell.svelte";
-	import Starfish from "../components/svgs/Starfish.svelte";
+	import BeachDecor from "../components/svgs/BeachDecor.svelte";
 	export let y;
 
 	function toggleAnimation() {
@@ -19,7 +18,7 @@
 </script>
 
 <div id="home">
-	<div class="center beach" style="color: var(--beach-text);">
+	<div class="center" style="color: var(--beach-text);">
 		<div id="main-logo">
 			<MainLogo />
 		</div>
@@ -42,7 +41,7 @@
 	</div>
 
 	<div id="beach-background">
-		<Seashell />
+		<BeachDecor />
 	</div>
 
 	<MediaQuery query="(min-width: 481px)" let:matches>
@@ -153,12 +152,12 @@
 		cursor: pointer;
 	}
 	#main-logo {
-		width: max(20vh, 11vw);
+		width: 160px;
 		margin: 0 auto;
 	}
 
 	#title {
-		font-size: max(5vh, 3vw);
+		font-size: 42px;
 		white-space: nowrap;
 		padding-top: 1vh;
 	}

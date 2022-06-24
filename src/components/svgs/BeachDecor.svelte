@@ -1,10 +1,10 @@
 <svg
-	width="100"
+	width="50%"
 	height="100"
 	viewBox="0 0 100 103"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
-	style="position: relative; top: 10vh;"
+	style="position: relative; "
 >
 	<g filter="url(#filter0_d_182_289)">
 		<path
@@ -87,12 +87,12 @@
 </svg>
 
 <svg
-	width="100"
+	width="50%"
 	height="100"
 	viewBox="0 0 105 106"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
-	style="position: relative;"
+	style="position: relative; left: -7vw;"
 >
 	<g filter="url(#filter0_d_182_271)">
 		<path

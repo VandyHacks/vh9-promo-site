@@ -40,7 +40,7 @@
 </script>
 
 <!-- Default -->
-<MediaQuery query="(min-width: 481px)" let:matches>
+<MediaQuery query="(min-width: 769px)" let:matches>
 	{#if matches}
 		<div id="navbar-top">
 			<Router>
@@ -69,7 +69,7 @@
 				<div />
 				<a
 					id="mlh-trust-badge"
-					style="display:block;max-width:100px;min-width:60px;position:relative;top:-30px;width:10%;z-index:10000"
+					style="display:block;max-width:100px;min-width:60px;position:absolute;top:0px;right:3vw;width:10%;z-index:10000"
 					href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=black"
 					target="_blank"
 				>
@@ -93,7 +93,7 @@
 </MediaQuery>
 
 <!-- Mobile -->
-<MediaQuery query="(max-width: 480px)" let:matches>
+<MediaQuery query="(max-width: 768px)" let:matches>
 	{#if matches}
 		<div id="hamburger" on:click={openNavbar}>
 			<Hamburger />
@@ -135,13 +135,25 @@
 				</div>
 			</div>
 		{/if}
+		<a
+			id="mlh-trust-badge"
+			style="display:block;max-width:100px;min-width:60px;position:absolute;top:0px;right:30px;width:80px;z-index:10000"
+			href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=black"
+			target="_blank"
+		>
+			<img
+				src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-black.svg"
+				alt="Major League Hacking 2022 Hackathon Season"
+				style="width:90%"
+			/>
+		</a>
 	{/if}
 </MediaQuery>
 
 <style>
 	#navbar-top {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		position: absolute;
 		z-index: 1;
 		width: 100%;
