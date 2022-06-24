@@ -68,11 +68,10 @@
 		color: white;
 		font-size: 18px;
 		font-family: Futura;
-		max-width: 200px;
-		width: 30vw;
-		margin: 20px auto 0 auto;
+		width: 40%;
+		margin: 20px auto;
+		padding: 2%;
 		border-radius: 10px;
-		padding: 5px 0;
 		box-shadow: 2px 5px 5px grey;
 	}
 
@@ -149,7 +148,7 @@
 	}
 
 	#main-logo {
-		width: 100px;
+		width: 140px;
 		margin: 0 auto;
 	}
 
@@ -192,7 +191,7 @@
 
 	@media screen and (min-width: 480px) {
 		#main-logo {
-			width: 130px;
+			width: 180px;
 		}
 		#title {
 			font-size: 30px;
@@ -207,7 +206,7 @@
 
 	@media screen and (min-width: 768px) {
 		#main-logo {
-			width: 160px;
+			width: 200px;
 		}
 		#title {
 			font-size: 42px;
