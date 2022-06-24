@@ -49,6 +49,19 @@
 
 	#text {
 		padding-top: 10px;
+		font-size: 18px;
+	}
+
+	@media screen and (min-width: 480px) {
+		#text {
+			font-size: 20px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		#text {
+			font-size: 24px;
+		}
 	}
 
 	#arrow > ul {

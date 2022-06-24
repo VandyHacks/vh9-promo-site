@@ -18,7 +18,7 @@
 </script>
 
 <div id="home">
-	<div class="center" style="color: var(--beach-text);">
+	<div class="beach" style="color: var(--beach-text);">
 		<div id="main-logo">
 			<MainLogo />
 		</div>
@@ -44,16 +44,12 @@
 		<BeachDecor />
 	</div>
 
-	<MediaQuery query="(min-width: 481px)" let:matches>
-		{#if matches}
-			<button
-				id="animation-toggle"
-				class={$isAnimationOn ? "on" : "off"}
-				role="switch"
-				on:click={toggleAnimation}
-			/>
-		{/if}
-	</MediaQuery>
+	<button
+		id="animation-toggle"
+		class={$isAnimationOn ? "on" : "off"}
+		role="switch"
+		on:click={toggleAnimation}
+	/>
 
 	<DiveDeeper currentPage="home" />
 </div>
@@ -70,9 +66,10 @@
 	#apply-button {
 		background-color: var(--beach-text);
 		color: white;
-		font-size: 30px;
+		font-size: 18px;
 		font-family: Futura;
-		width: 200px;
+		max-width: 200px;
+		width: 30vw;
 		margin: 20px auto 0 auto;
 		border-radius: 10px;
 		padding: 5px 0;
@@ -92,6 +89,7 @@
 		left: 15px;
 		width: 70px;
 		height: 40px;
+		font-size: 14px;
 	}
 
 	.on {
@@ -109,8 +107,6 @@
 		border-radius: 50%;
 		background: #fff;
 		top: 50%;
-		/* transform: translateY(-50%); */
-		/* right: 5px; */
 		width: 40%;
 		height: 70%;
 	}
@@ -151,27 +147,27 @@
 	#animation-toggle:hover {
 		cursor: pointer;
 	}
+
 	#main-logo {
-		width: 160px;
+		width: 100px;
 		margin: 0 auto;
 	}
 
 	#title {
-		font-size: 42px;
-		white-space: nowrap;
+		font-size: 24px;
 		padding-top: 1vh;
 	}
 
 	#date {
-		font-size: max(2.5vh, 1.5vw);
+		font-size: 16px;
 		font-family: Futura;
-		white-space: nowrap;
 	}
 
 	#social-media {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		align-items: center;
+		justify-content: center;
 		margin: 30px auto 0 auto;
 	}
 
@@ -185,5 +181,42 @@
 		left: 1vw;
 		width: 30vw;
 		height: 70vh;
+	}
+
+	.beach {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@media screen and (min-width: 480px) {
+		#main-logo {
+			width: 130px;
+		}
+		#title {
+			font-size: 30px;
+		}
+		#date {
+			font-size: 20px;
+		}
+		#apply-button {
+			font-size: 24px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		#main-logo {
+			width: 160px;
+		}
+		#title {
+			font-size: 42px;
+		}
+		#date {
+			font-size: 22px;
+		}
+		#apply-button {
+			font-size: 30px;
+		}
 	}
 </style>

@@ -4,9 +4,12 @@
 </script>
 
 <div id="about">
-	<div class="center">
+	<div class="text-container">
 		<div class="text-heading">About</div>
-		<div style="font-family: Futura; text-align: justify; ">
+		<div
+			class="text-paragraph"
+			style="font-family: Futura; text-align: justify; text-indent: 50px; margin: 0 20%; margin-top: 3%;"
+		>
 			VandyHacks is Vanderbilt's student-run hackathon, where participants
 			from all over the world create innovative projects over the course
 			of 36 hours. This year, our hackathon will be a hybrid event on
@@ -32,5 +35,14 @@
 
 	#about > * {
 		z-index: 1;
+	}
+
+	.text-container {
+		width: 100%;
+		margin: 0 auto;
+		height: 100%;
+		padding-top: 20vh;
+		z-index: 100;
+		position: relative;
 	}
 </style>

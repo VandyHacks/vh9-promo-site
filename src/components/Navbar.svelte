@@ -214,7 +214,6 @@
 
 	#close-button {
 		position: absolute;
-		/* background-color: pink; */
 		top: 30px;
 		right: 20px;
 		transform: scale(1.5);
