@@ -8,6 +8,7 @@
 	import Sponsors from "./pages/Sponsors.svelte";
 	import { innerHeightVal } from "./stores.js";
 
+	import Waves from "./components/svgs/Waves.svelte";
 	import OceanFloor1 from "./components/svgs/OceanFloor1.svelte";
 	import OceanFloor2 from "./components/svgs/OceanFloor2.svelte";
 	import OceanFloor3 from "./components/svgs/OceanFloor3.svelte";
@@ -37,6 +38,7 @@
 <Faq {y} />
 <Sponsors {y} />
 
+<Waves />
 <OceanFloor1
 	{y}
 	color={color1}

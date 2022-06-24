@@ -3,6 +3,13 @@
 	import MainLogo from "../components/svgs/MainLogo.svelte";
 	import { isAnimationOn } from "../stores.js";
 	import MediaQuery from "../MediaQuery.svelte";
+	import LogoInstagram from "../components/svgs/Logos/LogoInstagram.svelte";
+	import LogoYoutube from "../components/svgs/Logos/LogoYoutube.svelte";
+	import LogoGithub from "../components/svgs/Logos/LogoGithub.svelte";
+	import LogoDiscord from "../components/svgs/Logos/LogoDiscord.svelte";
+	import LogoTwitter from "../components/svgs/Logos/LogoTwitter.svelte";
+	import LogoFacebook from "../components/svgs/Logos/LogoFacebook.svelte";
+	import BeachDecor from "../components/svgs/BeachDecor.svelte";
 	export let y;
 
 	function toggleAnimation() {
@@ -11,7 +18,7 @@
 </script>
 
 <div id="home">
-	<div class="center beach" style="color: var(--beach-text);">
+	<div class="center" style="color: var(--beach-text);">
 		<div id="main-logo">
 			<MainLogo />
 		</div>
@@ -19,20 +26,23 @@
 		<div id="date">October 21 - 23 | Nashville, TN</div>
 		<div id="apply-button">Apply</div>
 		<div id="social-media">
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
-			<div />
+			<LogoInstagram />
+			<div class="custom-space-between" />
+			<LogoYoutube />
+			<div class="custom-space-between" />
+			<LogoGithub />
+			<div class="custom-space-between" />
+			<LogoDiscord />
+			<div class="custom-space-between" />
+			<LogoTwitter />
+			<div class="custom-space-between" />
+			<LogoFacebook />
 		</div>
 	</div>
 
-	<!-- Wave -->
-	<svg viewbox="0 0 100 20" class={$isAnimationOn ? "animate-wave" : ""}>
-		<path opacity="0.5" d="M0 30 V12 Q30 0 55 12 T100 11 V30z" />
-		<path d="M0 30 V12 Q30 20 55 12 T100 11 V30z" />
-	</svg>
+	<div id="beach-background">
+		<BeachDecor />
+	</div>
 
 	<MediaQuery query="(min-width: 481px)" let:matches>
 		{#if matches}
@@ -141,62 +151,13 @@
 	#animation-toggle:hover {
 		cursor: pointer;
 	}
-
-	svg {
-		position: absolute;
-		z-index: 1;
-		width: 100%;
-		bottom: 0;
-		left: 0;
-		pointer-events: none;
-	}
-
-	svg > path {
-		fill: var(--ocean-color);
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		animation-duration: 10s;
-	}
-
-	.animate-wave > path:nth-child(1) {
-		animation-name: oceanWave1;
-	}
-
-	.animate-wave > path:nth-child(2) {
-		animation-name: oceanWave2;
-	}
-
-	@keyframes oceanWave1 {
-		0% {
-			d: path("M0 30 V12 Q30 0 55 12 T100 11 V30z");
-		}
-		50% {
-			d: path("M0 30 V12 Q30 20 55 12 T100 11 V30z");
-		}
-		100% {
-			d: path("M0 30 V12 Q30 0 55 12 T100 11 V30z");
-		}
-	}
-
-	@keyframes oceanWave2 {
-		0% {
-			d: path("M0 30 V12 Q30 20 55 12 T100 11 V30z");
-		}
-		50% {
-			d: path("M0 30 V12 Q30 0 55 12 T100 11 V30z");
-		}
-		100% {
-			d: path("M0 30 V12 Q30 20 55 12 T100 11 V30z");
-		}
-	}
-
 	#main-logo {
-		width: max(20vh, 11vw);
+		width: 160px;
 		margin: 0 auto;
 	}
 
 	#title {
-		font-size: max(5vh, 3vw);
+		font-size: 42px;
 		white-space: nowrap;
 		padding-top: 1vh;
 	}
@@ -214,16 +175,15 @@
 		margin: 30px auto 0 auto;
 	}
 
-	#social-media > div {
-		border: 2px solid var(--beach-text);
-		background-color: var(--beach-text);
-		width: 40px;
-		height: 40px;
-		border-radius: 5px;
-		margin: 0 5px;
+	.custom-space-between {
+		width: 3vw;
 	}
 
-	#social-media > div:hover {
-		cursor: pointer;
+	#beach-background {
+		position: absolute;
+		top: 100px;
+		left: 1vw;
+		width: 30vw;
+		height: 70vh;
 	}
 </style>

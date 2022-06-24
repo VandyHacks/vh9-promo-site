@@ -2,6 +2,7 @@
 	--beach-color: #fde9c8;
 	--beach-text: #6a4c15;
 	--ocean-color: #91cdd2;
+	font-size: 16px;
 }
 
 body {
@@ -38,4 +39,12 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+body {
+	font-size: calc(1em + 1vmin);
+}
+
+.text-heading {
+	font-size: 3em;
 }
