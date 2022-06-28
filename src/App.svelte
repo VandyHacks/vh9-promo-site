@@ -64,3 +64,9 @@
 	scrollSpeed={0.9}
 />
 <OceanFloor5 color={color5} />
+
+<style lang="postcss" global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+</style>
