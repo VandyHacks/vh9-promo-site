@@ -23,6 +23,8 @@
 	},
 	"dependencies": {
 		"sirv-cli": "^2.0.0",
+		"surge": "^0.23.1",
+		"svelte-matrix": "^1.0.0",
 		"svelte-routing": "^1.6.0"
 	}
 }
