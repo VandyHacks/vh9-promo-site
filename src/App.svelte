@@ -127,14 +127,9 @@
   @tailwind components;
   @tailwind utilities;
 
-  /* :global(body) {
-    overflow: hidden;
-  } */
-
   span {
     position: absolute;
     font-size: 5vw;
     user-select: none;
-    /* overflow: hidden; */
   }
 </style>
