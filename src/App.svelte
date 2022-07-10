@@ -45,35 +45,35 @@
         '01011000',
     ]
 
-    let confetti = new Array(100)
-        .fill()
-        .map((_, i) => {
-            return {
-                character: characters[i % characters.length],
-                x: Math.random() * 100,
-                y: -20 - Math.random() * 100,
-                r: 0.1 + Math.random() * 1,
-            }
-        })
-        .sort((a, b) => a.r - b.r)
+    // let confetti = new Array(100)
+    //     .fill()
+    //     .map((_, i) => {
+    //         return {
+    //             character: characters[i % characters.length],
+    //             x: Math.random() * 100,
+    //             y: -20 - Math.random() * 100,
+    //             r: 0.1 + Math.random() * 1,
+    //         }
+    //     })
+    //     .sort((a, b) => a.r - b.r)
 
-    onMount(() => {
-        let frame
+    // onMount(() => {
+    //     let frame
 
-        function loop() {
-            frame = requestAnimationFrame(loop)
+    //     function loop() {
+    //         frame = requestAnimationFrame(loop)
 
-            confetti = confetti.map((emoji) => {
-                emoji.y += 0.7 * emoji.r
-                if (emoji.y > 120) emoji.y = -200
-                return emoji
-            })
-        }
+    //         confetti = confetti.map((emoji) => {
+    //             emoji.y += 0.7 * emoji.r
+    //             if (emoji.y > 120) emoji.y = -200
+    //             return emoji
+    //         })
+    //     }
 
-        loop()
+    //     loop()
 
-        return () => cancelAnimationFrame(frame)
-    })
+    //     return () => cancelAnimationFrame(frame)
+    // })
     //end of binary code rain
 </script>
 
@@ -115,13 +115,12 @@
 />
 <OceanFloor5 color={color5} />
 
-{#each confetti as c}
+<!-- {#each confetti as c}
     <span
         style="left: {c.x}%; top: {c.y}%; transform: rotate(90deg) scale({c.r});"
         >{c.character}</span
     >
-{/each}
-
+{/each} -->
 <style lang="postcss" global>
     @tailwind base;
     @tailwind components;
