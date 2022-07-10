@@ -2,7 +2,6 @@
     import DiveDeeper from '../components/DiveDeeper.svelte'
     import MainLogo from '../components/svgs/MainLogo.svelte'
     import { isAnimationOn } from '../stores.js'
-    import MediaQuery from '../MediaQuery.svelte'
     import LogoInstagram from '../components/svgs/Logos/LogoInstagram.svelte'
     import LogoYoutube from '../components/svgs/Logos/LogoYoutube.svelte'
     import LogoGithub from '../components/svgs/Logos/LogoGithub.svelte'
@@ -17,205 +16,78 @@
     }
 </script>
 
-<div id="home">
-    <div class="beach" style="color: var(--beach-text);">
-        <div id="main-logo">
-            <MainLogo />
-        </div>
-        <div id="title">VANDYHACKS IX</div>
-        <div id="date">October 21 - 23 | Nashville, TN</div>
-        <div id="apply-button">Apply</div>
-        <div id="social-media">
-            <LogoInstagram />
-            <div class="custom-space-between" />
-            <LogoYoutube />
-            <div class="custom-space-between" />
-            <LogoGithub />
-            <div class="custom-space-between" />
-            <LogoDiscord />
-            <div class="custom-space-between" />
-            <LogoTwitter />
-            <div class="custom-space-between" />
-            <LogoFacebook />
+<div
+    id="home"
+    class="h-screen w-screen relative"
+    style="background-color: var(--beach-color);"
+>
+    <div class="h-screen flex" style="color: var(--beach-text);">
+        <div class="flex flex-col justify-center content-center m-auto">
+            <div class="w-32 sm:w-44 md:w-56 lg:w-60 place-self-center">
+                <MainLogo />
+            </div>
+            <div
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-8 pb-2 md:pt-10 md:pb-4"
+            >
+                VANDYHACKS IX
+            </div>
+            <div
+                class="text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                style="font-family: Futura;"
+            >
+                October 21 - 23 | Nashville, TN
+            </div>
+            <div
+                class="text-white w-32 md:w-44 lg:w-52 h-10 md:h-14 lg:h-16 text-2xl md:text-3xl lg:text-4xl pt-1 lg:pt-2 mt-5 place-self-center drop-shadow-xl rounded-lg hover:cursor-pointer"
+                style="background-color: var(--beach-text); font-family: Futura;"
+            >
+                Apply
+            </div>
+            <div
+                id=""
+                class="flex justify-center items-center mt-8 space-x-3 md:space-x-6 lg:space-x-8"
+            >
+                <LogoInstagram />
+                <LogoYoutube />
+                <LogoGithub />
+                <LogoDiscord />
+                <LogoTwitter />
+                <LogoFacebook />
+            </div>
         </div>
     </div>
 
-    <div id="beach-background">
+    <div class="absolute w-1/3 h-3/4 top-20 left-10">
         <BeachDecor />
     </div>
 
-    <button
-        id="animation-toggle"
-        class={$isAnimationOn ? 'on' : 'off'}
-        role="switch"
-        on:click={toggleAnimation}
-    />
+    <div class="absolute p-4 bottom-0 z-10 flex justify-center">
+        <label
+            for="default-toggle"
+            class="inline-flex relative items-center cursor-pointer"
+        >
+            <input
+                type="checkbox"
+                value=""
+                id="default-toggle"
+                class="sr-only peer"
+                on:click={toggleAnimation}
+            />
+            <div
+                class="w-11 h-6 md:w-14 md:h-8 lg:w-16 lg:h-10
+					after:h-5 after:w-5 md:after:h-6 md:after:w-6 lg:after:h-7 lg:after:w-7
+					after:top-[2px] after:left-[2px] md:after:top-[4px] md:after:left-[4px] lg:after:left-[4px] lg:after:top-[6px]
+					bg-[#8E8E8E] peer-focus:outline-none rounded-full 
+					peer peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:bg-[#26305D] 
+					after:content-[''] after:absolute after:bg-white after:border-gray-300 after:border after:rounded-full after:transition-all"
+            />
+        </label>
+        <div
+            class="flex items-center invisible sm:visible ml-2 text-md md:text-lg lg:text-xl text-white"
+        >
+            Animations
+        </div>
+    </div>
 
     <DiveDeeper currentPage="home" />
 </div>
-
-<style>
-    #home {
-        background-color: var(--beach-color);
-        height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    #apply-button {
-        background-color: var(--beach-text);
-        color: white;
-        font-size: 18px;
-        font-family: Futura;
-        width: 40%;
-        margin: 20px auto;
-        padding: 2%;
-        border-radius: 10px;
-        box-shadow: 2px 5px 5px grey;
-    }
-
-    #apply-button:hover {
-        cursor: pointer;
-    }
-
-    #animation-toggle {
-        border: 0;
-        border-radius: 50px;
-        position: absolute;
-        z-index: 3;
-        bottom: 15px;
-        left: 15px;
-        width: 70px;
-        height: 40px;
-        font-size: 14px;
-    }
-
-    .on {
-        background-color: #26305d;
-    }
-
-    .off {
-        background-color: #8e8e8e;
-    }
-
-    .on::before,
-    .off::before {
-        position: absolute;
-        content: '';
-        border-radius: 50%;
-        background: #fff;
-        top: 50%;
-        width: 40%;
-        height: 70%;
-    }
-
-    .on::before {
-        -webkit-transform: translateX(-26px);
-        -ms-transform: translateX(26px);
-        transform: translateY(-50%);
-        transition: 200ms;
-    }
-
-    .off::before {
-        -webkit-transform: translateX(-26px);
-        -ms-transform: translateX(-26px);
-        transform: translateX(-26px) translateY(-50%);
-        transition: 200ms;
-    }
-
-    .on::after,
-    .off::after {
-        position: absolute;
-        font-size: 1.5em;
-        color: white;
-        white-space: nowrap;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 80px;
-    }
-
-    .on::after {
-        content: 'Animations ON';
-    }
-
-    .off::after {
-        content: 'Animations OFF';
-    }
-
-    #animation-toggle:hover {
-        cursor: pointer;
-    }
-
-    #main-logo {
-        width: 140px;
-        margin: 0 auto;
-    }
-
-    #title {
-        font-size: 24px;
-        padding-top: 1vh;
-    }
-
-    #date {
-        font-size: 16px;
-        font-family: Futura;
-    }
-
-    #social-media {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin: 30px auto 0 auto;
-    }
-
-    .custom-space-between {
-        width: 3vw;
-    }
-
-    #beach-background {
-        position: absolute;
-        top: 100px;
-        left: 1vw;
-        width: 30vw;
-        height: 70vh;
-    }
-
-    .beach {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    @media screen and (min-width: 480px) {
-        #main-logo {
-            width: 180px;
-        }
-        #title {
-            font-size: 30px;
-        }
-        #date {
-            font-size: 20px;
-        }
-        #apply-button {
-            font-size: 24px;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        #main-logo {
-            width: 200px;
-        }
-        #title {
-            font-size: 42px;
-        }
-        #date {
-            font-size: 22px;
-        }
-        #apply-button {
-            font-size: 30px;
-        }
-    }
-</style>

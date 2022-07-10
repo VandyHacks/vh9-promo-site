@@ -1,93 +1,43 @@
 <script>
     import { pageOrder } from '../stores.js'
     import { navigateTo } from './Navbar.svelte'
+    import { isAnimationOn } from '../stores.js'
     export let currentPage
 </script>
 
-<div id="dive-deeper">
+<div class="absolute flex w-screen justify-center bottom-0 z-[2]">
     <div
-        id="dive-deeper-button"
-        on:click={navigateTo($pageOrder[currentPage] + 1)}
+        class="flex flex-col items-center {$isAnimationOn
+            ? 'animate-bounce'
+            : ''}"
     >
-        <div id="text">Dive Deeper</div>
-        <div id="arrow">
-            <ul>
-                <li />
-                <li />
-            </ul>
+        <div
+            class="text-xl md:text-2xl lg:text-3xl tracking-widest hover:cursor-pointer"
+            on:click={navigateTo($pageOrder[currentPage] + 1)}
+        >
+            Dive Deeper
         </div>
+        <!-- Downward Arrow -->
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+            />
+        </svg>
     </div>
 </div>
 
 <style>
-    #dive-deeper {
+    div {
         font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        z-index: 2;
-        letter-spacing: 2px;
-        font-size: 24px;
-        font-weight: 500;
         color: white;
-    }
-
-    #dive-deeper-button {
-        width: 20vw;
-        min-width: 250px;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #dive-deeper-button:hover {
-        cursor: pointer;
-    }
-
-    #text {
-        padding-top: 10px;
-        font-size: 18px;
-    }
-
-    @media screen and (min-width: 480px) {
-        #text {
-            font-size: 20px;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        #text {
-            font-size: 24px;
-        }
-    }
-
-    #arrow > ul {
-        list-style: none;
-        position: relative;
-    }
-
-    #arrow > ul > li {
-        width: 24px;
-        height: 4px;
-        background-color: white;
-    }
-
-    #arrow > ul > li:nth-child(1) {
-        left: 0;
-        top: -10px;
-        position: absolute;
-        transform: rotate(45deg);
-        border-radius: 5px 0 0 5px;
-    }
-
-    #arrow > ul > li:nth-child(2) {
-        left: 14px;
-        top: -10px;
-        position: absolute;
-        border-radius: 0 5px 5px 0;
-        transform: rotate(-45deg);
     }
 </style>

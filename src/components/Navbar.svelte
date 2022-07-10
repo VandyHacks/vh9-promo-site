@@ -42,27 +42,37 @@
 <!-- Default -->
 <MediaQuery query="(min-width: 769px)" let:matches>
     {#if matches}
-        <div id="navbar-top">
+        <div
+            id="navbar-top"
+            class="flex justify-evenly absolute z-[1] w-screen p-10"
+            style="color: var(--beach-text);"
+        >
             <Router>
                 <Link
                     to="about"
+                    class="text-3xl"
                     on:click={() => navigateTo($pageOrder['about'])}>About</Link
                 >
                 <Link
                     to="schedule"
+                    class="text-3xl"
                     on:click={() => navigateTo($pageOrder['schedule'])}
                     >Schedule</Link
                 >
                 <Link
                     to="speakers"
+                    class="text-3xl"
                     on:click={() => navigateTo($pageOrder['speakers'])}
                     >Speakers</Link
                 >
-                <Link to="faq" on:click={() => navigateTo($pageOrder['faq'])}
-                    >FAQ</Link
+                <Link
+                    to="faq"
+                    class="text-3xl"
+                    on:click={() => navigateTo($pageOrder['faq'])}>FAQ</Link
                 >
                 <Link
                     to="sponsors"
+                    class="text-3xl"
                     on:click={() => navigateTo($pageOrder['sponsors'])}
                     >Sponsors</Link
                 >
@@ -83,9 +93,9 @@
         </div>
 
         {#if y >= $innerHeightVal / 2}
-            <div id="navbar-side" transition:fade>
-                <div id="submarine-container">
-                    <div class="center">Submarine buddy goes here</div>
+            <div class="fixed w-28 h-screen z-[1]" transition:fade>
+                <div id="submarine-container" class="absolute h-[50%]">
+                    <div>Submarine buddy goes here</div>
                 </div>
             </div>
         {/if}
@@ -151,36 +161,10 @@
 </MediaQuery>
 
 <style>
-    #navbar-top {
-        display: flex;
-        justify-content: space-evenly;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        padding: 30px 0;
-    }
-
-    #navbar-side {
-        position: fixed;
-        width: 5vw;
-        min-width: 80px;
-        height: 100vh;
-        z-index: 1;
-        left: 0;
-    }
-
-    #navbar-top > :global(a) {
-        color: var(--beach-text);
-        font-size: 1.5em;
-    }
-
     #submarine-container {
-        position: absolute;
         border: 5px solid aquamarine;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-        height: 50%;
+        /* top: 50%;
+		transform: translateY(-50%); */
     }
 
     #hamburger {
