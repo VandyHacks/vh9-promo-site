@@ -1,72 +1,72 @@
 * {
-	--beach-color: #fde9c8;
-	--beach-text: #6a4c15;
-	--ocean-color: #91cdd2;
-	font-size: 16px;
+    --beach-color: #fde9c8;
+    --beach-text: #6a4c15;
+    --ocean-color: #91cdd2;
+    font-size: 16px;
 }
 
 body {
-	font-family: "Fisherman", sans-serif;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	position: relative;
-	text-align: center;
-	line-height: 1.5;
-	overflow-x: hidden;
+    font-family: 'Fisherman', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+    text-align: center;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 @font-face {
-	font-family: "Fisherman";
-	src: url("/fonts/Fisherman.otf") format("opentype");
+    font-family: 'Fisherman';
+    src: url('/fonts/Fisherman.otf') format('opentype');
 }
 
 @font-face {
-	font-family: "Futura";
-	src: url("/fonts/Futura.ttf") format("truetype");
+    font-family: 'Futura';
+    src: url('/fonts/Futura.ttf') format('truetype');
 }
 
 .center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 body {
-	font-size: calc(1em + 1vmin);
+    font-size: calc(1em + 1vmin);
 }
 
 .text-heading {
-	font-size: 34px;
+    font-size: 34px;
 }
 
 .text-paragraph {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 @media screen and (min-width: 480px) {
-	.text-heading {
-		font-size: 42px;
-	}
-	.text-paragraph {
-		font-size: 20px;
-	}
+    .text-heading {
+        font-size: 42px;
+    }
+    .text-paragraph {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.text-heading {
-		font-size: 50px;
-	}
-	.text-paragraph {
-		font-size: 24px;
-	}
+    .text-heading {
+        font-size: 50px;
+    }
+    .text-paragraph {
+        font-size: 24px;
+    }
 }
