@@ -18,7 +18,7 @@
 
 <div
     id="home"
-    class="h-screen w-screen relative"
+    class="h-screen w-screen absolute"
     style="background-color: var(--beach-color);"
 >
     <div class="h-screen flex" style="color: var(--beach-text);">

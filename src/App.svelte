@@ -8,7 +8,7 @@
     import Sponsors from './pages/Sponsors.svelte'
     import { innerHeightVal } from './stores.js'
 
-    import Waves from './components/svgs/Waves.svelte'
+    import Wave from './components/svgs/Wave.svelte'
     import OceanFloor1 from './components/svgs/OceanFloor1.svelte'
     import OceanFloor2 from './components/svgs/OceanFloor2.svelte'
     import OceanFloor3 from './components/svgs/OceanFloor3.svelte'
@@ -82,35 +82,35 @@
 <Navbar {y} />
 
 <Home {y} />
+<Wave />
 <About {y} />
 <Schedule {y} />
 <Speakers {y} />
 <Faq {y} />
 <Sponsors {y} />
 
-<!-- <Waves /> -->
 <OceanFloor1
     {y}
     color={color1}
-    topVal={$innerHeightVal * 1}
+    topVal={$innerHeightVal * 2}
     scrollSpeed={0.6}
 />
 <OceanFloor2
     {y}
     color={color2}
-    topVal={$innerHeightVal * 2}
+    topVal={$innerHeightVal * 3}
     scrollSpeed={0.7}
 />
 <OceanFloor3
     {y}
     color={color3}
-    topVal={$innerHeightVal * 2.85}
+    topVal={$innerHeightVal * 3.85}
     scrollSpeed={0.9}
 />
 <OceanFloor4
     {y}
     color={color4}
-    topVal={$innerHeightVal * 3.4}
+    topVal={$innerHeightVal * 4.4}
     scrollSpeed={0.9}
 />
 <OceanFloor5 color={color5} />
