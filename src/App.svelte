@@ -88,7 +88,7 @@
 <Faq {y} />
 <Sponsors {y} />
 
-<Waves />
+<!-- <Waves /> -->
 <OceanFloor1
     {y}
     color={color1}

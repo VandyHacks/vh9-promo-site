@@ -4,6 +4,7 @@
     viewBox="0 0 35 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    class="w-8 md:w-9 lg:w-10 h-8 md:h-9 lg:h-10"
 >
     <path
         fill-rule="evenodd"

@@ -23,29 +23,31 @@
 >
     <div class="h-screen flex" style="color: var(--beach-text);">
         <div class="flex flex-col justify-center content-center m-auto">
-            <div class="w-32 sm:w-44 md:w-56 lg:w-60 place-self-center">
+            <div
+                class="w-32 sm:w-36 md:w-44 lg:w-52 xl:w-56 2xl:w-[10vw] place-self-center"
+            >
                 <MainLogo />
             </div>
             <div
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-8 pb-2 md:pt-10 md:pb-4"
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-4 pb-2 md:pt-6 md:pb-4"
             >
                 VANDYHACKS IX
             </div>
             <div
-                class="text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                class="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-[1.5vw]"
                 style="font-family: Futura;"
             >
                 October 21 - 23 | Nashville, TN
             </div>
             <div
-                class="text-white w-32 md:w-44 lg:w-52 h-10 md:h-14 lg:h-16 text-2xl md:text-3xl lg:text-4xl pt-1 lg:pt-2 mt-5 place-self-center drop-shadow-xl rounded-lg hover:cursor-pointer"
+                class="text-white w-24 md:w-32 lg:w-40 h-10 md:h-12 lg:h-14 text-xl md:text-2xl lg:text-3xl pt-1 lg:pt-2 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-pointer"
                 style="background-color: var(--beach-text); font-family: Futura;"
             >
                 Apply
             </div>
             <div
                 id=""
-                class="flex justify-center items-center mt-8 space-x-3 md:space-x-6 lg:space-x-8"
+                class="flex justify-center items-center mt-4 space-x-3 md:space-x-6 lg:space-x-8"
             >
                 <LogoInstagram />
                 <LogoYoutube />
