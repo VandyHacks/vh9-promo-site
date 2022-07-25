@@ -63,6 +63,10 @@
         <BeachDecor />
     </div>
 
+    <div class="fixed items-center">
+        <DiveDeeper currentPage="wave" />
+    </div>
+
     <div class="absolute p-4 bottom-0 z-10 flex justify-center">
         <label
             for="default-toggle"
