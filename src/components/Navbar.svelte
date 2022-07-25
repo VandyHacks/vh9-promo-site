@@ -44,7 +44,7 @@
     {#if matches}
         <div
             id="navbar-top"
-            class="flex justify-evenly absolute z-[1] w-screen p-10"
+            class="flex justify-evenly fixed w-screen p-10"
             style="color: var(--beach-text);"
         >
             <Router>
@@ -93,7 +93,7 @@
         </div>
 
         {#if y >= $innerHeightVal / 2}
-            <div class="fixed w-28 h-screen z-[1]" transition:fade>
+            <div class="fixed w-28 h-screen z-10" transition:fade>
                 <div id="submarine-container" class="absolute h-[50%]">
                     <div>Submarine buddy goes here</div>
                 </div>

@@ -79,10 +79,9 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight />
 
-<Navbar {y} />
-
 <Home {y} />
-<Wave />
+<Navbar {y} />
+<Wave {y} />
 <About {y} />
 <Schedule {y} />
 <Speakers {y} />
@@ -113,7 +112,7 @@
     topVal={$innerHeightVal * 4.4}
     scrollSpeed={0.9}
 />
-<OceanFloor5 color={color5} />
+<OceanFloor5 color={color5} /> -->
 
 <!-- {#each confetti as c}
     <span

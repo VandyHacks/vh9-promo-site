@@ -18,7 +18,7 @@
 
 <div
     id="home"
-    class="h-screen w-screen absolute"
+    class="h-screen w-screen fixed"
     style="background-color: var(--beach-color);"
 >
     <div class="h-screen flex" style="color: var(--beach-text);">
@@ -90,6 +90,4 @@
             Animations
         </div>
     </div>
-
-    <DiveDeeper currentPage="home" />
 </div>
