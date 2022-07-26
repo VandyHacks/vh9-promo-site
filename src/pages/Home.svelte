@@ -18,7 +18,7 @@
 
 <div
     id="home"
-    class="h-screen w-screen relative"
+    class="h-screen w-screen fixed"
     style="background-color: var(--beach-color);"
 >
     <div class="h-screen flex" style="color: var(--beach-text);">
@@ -63,6 +63,10 @@
         <BeachDecor />
     </div>
 
+    <div class="fixed items-center">
+        <DiveDeeper currentPage="wave" />
+    </div>
+
     <div class="absolute p-4 bottom-0 z-10 flex justify-center">
         <label
             for="default-toggle"
@@ -90,6 +94,4 @@
             Animations
         </div>
     </div>
-
-    <DiveDeeper currentPage="home" />
 </div>

@@ -1,9 +1,11 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
+    import LightSource from '../components/svgs/LightSource.svelte'
     export let y
 </script>
 
 <div id="about">
+    <LightSource />
     <div class="text-container">
         <div class="text-heading">About</div>
         <div
