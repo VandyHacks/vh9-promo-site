@@ -3,8 +3,7 @@
 </script>
 
 <svg
-    width="100%"
-    height="12vh"
+    class="w-full h-[12vh] absolute left-0 bottom-0"
     viewBox="0 0 1440 195"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,11 +14,3 @@
         fill={color}
     />
 </svg>
-
-<style>
-    svg {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-</style>

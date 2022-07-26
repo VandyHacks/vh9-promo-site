@@ -4,13 +4,14 @@
     export let y
 </script>
 
-<div id="about">
+<div
+    class="flex relative h-screen w-full bg-gradient-to-b from-[#eafdff] to-[#b6dfe2]"
+>
     <LightSource />
-    <div class="text-container">
-        <div class="text-heading">About</div>
+    <div class="m-auto">
+        <div class="text-2xl md:text-4xl lg:text-6xl">About</div>
         <div
-            class="text-paragraph"
-            style="font-family: Futura; text-align: justify; text-indent: 50px; margin: 0 20%; margin-top: 3%;"
+            class="font-['Futura'] text-justify indent-[50px] my-0 mx-[20%] mt-[3%] text-sm md:text-md lg:text-lg xl:text-2xl"
         >
             VandyHacks is Vanderbilt's student-run hackathon, where participants
             from all over the world create innovative projects over the course
@@ -22,29 +23,3 @@
 
     <DiveDeeper currentPage="about" />
 </div>
-
-<style>
-    #about {
-        background: linear-gradient(to bottom, #eafdff, #b6dfe2 100%);
-        background: -o-linear-gradient(to bottom, #eafdff, #b6dfe2 100%);
-        background: -moz-linear-gradient(to bottom, #eafdff, #b6dfe2 100%);
-        background: -webkit-linear-gradient(to bottom, #eafdff, #b6dfe2 100%);
-        height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    #about > * {
-        z-index: 1;
-    }
-
-    .text-container {
-        width: 100%;
-        margin: 0 auto;
-        height: 100%;
-        padding-top: 20vh;
-        z-index: 100;
-        position: relative;
-    }
-</style>

@@ -44,29 +44,3 @@ a:hover {
 body {
     font-size: calc(1em + 1vmin);
 }
-
-.text-heading {
-    font-size: 34px;
-}
-
-.text-paragraph {
-    font-size: 16px;
-}
-
-@media screen and (min-width: 480px) {
-    .text-heading {
-        font-size: 42px;
-    }
-    .text-paragraph {
-        font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .text-heading {
-        font-size: 50px;
-    }
-    .text-paragraph {
-        font-size: 24px;
-    }
-}

@@ -94,7 +94,9 @@
 
         {#if y >= $innerHeightVal / 2}
             <div class="fixed w-28 h-screen z-10" transition:fade>
-                <div id="submarine-container" class="absolute h-[50%]">
+                <div
+                    class="absolute h-[50%] top-[50%] translate-y-[-50%] border-4 border-teal-400"
+                >
                     <div>Submarine buddy goes here</div>
                 </div>
             </div>
@@ -105,37 +107,50 @@
 <!-- Mobile -->
 <MediaQuery query="(max-width: 768px)" let:matches>
     {#if matches}
-        <div id="hamburger" on:click={openNavbar}>
+        <div class="fixed z-[1] top-[30px] left-[30px]" on:click={openNavbar}>
             <Hamburger />
         </div>
         {#if $isNavbarOpen}
-            <div id="navbar-mobile" transition:fly={{ duration: 200, x: -200 }}>
-                <div id="close-button" on:click={closeNavbar}>
+            <div
+                class="fixed z-10 top-0 left-0 w-[55vw] h-[100%] bg-white shadow-black shadow-lg rounded-xl"
+                transition:fly={{ duration: 200, x: -200 }}
+            >
+                <div
+                    class="absolute top-[30px] right-[20px] scale-150"
+                    on:click={closeNavbar}
+                >
                     <CrossCircle />
                 </div>
-                <div id="navbar-mobile-container">
+                <div
+                    class="flex flex-col space-y-5 h-[100%] font-mono font-medium text-start pl-8 pt-20"
+                >
                     <Router>
                         <Link
+                            class="text-xl"
                             to="about"
                             on:click={() => navigateTo($pageOrder['about'])}
                             >About</Link
                         >
                         <Link
+                            class="text-xl"
                             to="schedule"
                             on:click={() => navigateTo($pageOrder['schedule'])}
                             >Schedule</Link
                         >
                         <Link
+                            class="text-xl"
                             to="speakers"
                             on:click={() => navigateTo($pageOrder['speakers'])}
                             >Speakers</Link
                         >
                         <Link
+                            class="text-xl"
                             to="faq"
                             on:click={() => navigateTo($pageOrder['faq'])}
                             >FAQ</Link
                         >
                         <Link
+                            class="text-xl"
                             to="sponsors"
                             on:click={() => navigateTo($pageOrder['sponsors'])}
                             >Sponsors</Link
@@ -159,47 +174,3 @@
         </a>
     {/if}
 </MediaQuery>
-
-<style>
-    #submarine-container {
-        border: 5px solid aquamarine;
-        /* top: 50%;
-		transform: translateY(-50%); */
-    }
-
-    #hamburger {
-        position: fixed;
-        z-index: 1;
-        top: 30px;
-        left: 30px;
-    }
-
-    #navbar-mobile {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        width: 60vw;
-        height: 100%;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    #navbar-mobile-container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: 100px 0 0 30px;
-        font-size: 28px;
-        text-align: start;
-        color: black;
-    }
-
-    #close-button {
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        transform: scale(1.5);
-    }
-</style>
