@@ -80,12 +80,12 @@
                 <a
                     id="mlh-trust-badge"
                     style="display:block;max-width:100px;min-width:60px;position:absolute;top:0px;right:3vw;width:10%;z-index:10000"
-                    href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=black"
+                    href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=black"
                     target="_blank"
                 >
                     <img
-                        src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-black.svg"
-                        alt="Major League Hacking 2022 Hackathon Season"
+                        src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-black.svg"
+                        alt="Major League Hacking 2023 Hackathon Season"
                         style="width:90%"
                     />
                 </a>
@@ -148,12 +148,12 @@
         <a
             id="mlh-trust-badge"
             style="display:block;max-width:100px;min-width:60px;position:absolute;top:0px;right:30px;width:80px;z-index:10000"
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=black"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=black"
             target="_blank"
         >
             <img
-                src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-black.svg"
-                alt="Major League Hacking 2022 Hackathon Season"
+                src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-black.svg"
+                alt="Major League Hacking 2023 Hackathon Season"
                 style="width:90%"
             />
         </a>
