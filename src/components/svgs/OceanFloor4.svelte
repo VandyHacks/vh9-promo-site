@@ -5,15 +5,14 @@
     export let y
     export let scrollSpeed = 1
     let translateAmount = 0
-    $: y, (translateAmount = Math.max((topVal - y - 1000) * scrollSpeed, -400))
+    // $: y, (translateAmount = Math.max((topVal - y - 1000) * scrollSpeed, -400))
 </script>
 
 <svg
     style="top: {topVal}px; min-width: 200px; {$isAnimationOn
         ? `transform: translateY(${translateAmount}px)`
         : ''}"
-    width="15%"
-    height={$isAnimationOn ? '250vh' : '250vh'}
+    class="w-[15%] h-[250vh] absolute left-0"
     viewBox="0 0 286 2284"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -24,10 +23,3 @@
         fill={color}
     />
 </svg>
-
-<style>
-    svg {
-        position: absolute;
-        left: 0;
-    }
-</style>

@@ -4,9 +4,7 @@
 
 <div class="h-[200vh] w-screen relative z-[5] pointer-events-none">
     <svg
-        width="102vw"
-        height="100vh"
-        class="absolute -left-[3px] bottom-0"
+        class="w-[250vw] md:w-[102vw] h-[100vh] absolute bottom-0 -right-10vw] md:-right-[3px]"
         viewBox="0 0 1453 1027"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

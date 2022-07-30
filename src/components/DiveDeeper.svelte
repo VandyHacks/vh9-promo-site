@@ -5,7 +5,9 @@
     export let currentPage
 </script>
 
-<div class="absolute flex w-screen justify-center bottom-0 z-10">
+<div
+    class="absolute flex w-screen justify-center bottom-0 z-10 text-white font-sans"
+>
     <div
         class="flex flex-col items-center {$isAnimationOn
             ? 'animate-bounce'
@@ -34,10 +36,3 @@
         </svg>
     </div>
 </div>
-
-<style>
-    div {
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
-</style>

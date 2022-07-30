@@ -17,7 +17,6 @@
 </script>
 
 <div
-    id="home"
     class="h-screen w-screen fixed"
     style="background-color: var(--beach-color);"
 >

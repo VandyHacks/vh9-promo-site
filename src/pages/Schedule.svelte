@@ -3,13 +3,13 @@
     export let y
 </script>
 
-<div id="schedule">
-    <div class="center">This is Schedule page {y} px</div>
+<div id="custom-linear-gradient" class="flex relative h-screen w-full">
+    <div class="m-auto z-[1]">This is Schedule page {y} px</div>
     <DiveDeeper currentPage="schedule" />
 </div>
 
 <style>
-    #schedule {
+    #custom-linear-gradient {
         background: linear-gradient(
             to bottom,
             #a9d8db,
@@ -38,13 +38,5 @@
             #8fc9cf 70%,
             #8fc9cf 100%
         );
-        height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    #schedule > * {
-        z-index: 1;
     }
 </style>
