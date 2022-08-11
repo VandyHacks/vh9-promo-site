@@ -3,26 +3,26 @@
     import Papa from 'papaparse'
 
     let selectedDay = 1
+    let schedules = []
     let scheduleOfTheDay = ''
     export let y
 
-    Papa.parse(`./schedule/Day1.csv`, {
-        download: true,
-        header: true,
-        complete: function (results) {
-            scheduleOfTheDay = results.data
-        },
-    })
-
-    function getScheduleOfTheDay(day) {
-        selectedDay = day
-        Papa.parse(`./schedule/Day${day}.csv`, {
+    for (let i = 0; i < 3; i++) {
+        Papa.parse(`./schedule/Day${i + 1}.csv`, {
             download: true,
             header: true,
             complete: function (results) {
-                scheduleOfTheDay = results.data
+                schedules[i] = results.data
+                if (i == 0) {
+                    scheduleOfTheDay = schedules[i]
+                }
             },
         })
+    }
+
+    function getScheduleOfTheDay(day) {
+        selectedDay = day
+        scheduleOfTheDay = schedules[day - 1]
     }
 </script>
 
