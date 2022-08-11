@@ -1,10 +1,11 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
+    import BookAndButtons from '../components/svgs/BookAndButtons.svelte'
     export let y
 </script>
 
 <div id="custom-linear-gradient" class="flex relative h-screen w-full">
-    <div class="m-auto z-[1]">This is Schedule page {y} px</div>
+    <BookAndButtons />
     <DiveDeeper currentPage="schedule" />
 </div>
 
