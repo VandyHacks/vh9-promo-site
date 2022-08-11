@@ -112,7 +112,7 @@
     topVal={$innerHeightVal * 4.4}
     scrollSpeed={0.9}
 />
-<OceanFloor5 color={color5} /> -->
+<OceanFloor5 color={color5} />
 
 <!-- {#each confetti as c}
     <span
