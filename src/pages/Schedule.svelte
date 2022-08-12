@@ -72,6 +72,7 @@
 
             <!-- Schedule -->
             <div
+                id="scrollable-content"
                 class="absolute overflow-y-scroll top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] px-10"
             >
                 <div
@@ -149,5 +150,16 @@
             #8fc9cf 70%,
             #8fc9cf 100%
         );
+    }
+    #scrollable-content::-webkit-scrollbar {
+        width: 10px;
+    }
+    #scrollable-content::-webkit-scrollbar * {
+        background: transparent;
+        border-radius: 10px;
+    }
+    #scrollable-content::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(255, 0, 0, 0.1) !important;
     }
 </style>
