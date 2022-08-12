@@ -30,13 +30,89 @@
 
     let particlesConfig = {
         particles: {
+            color: {
+                value: '#ffffff',
+            },
+            links: {
+                enable: false,
+            },
+            move: {
+                enable: false,
+                outModes: {
+                    bottom: 'out',
+                    left: 'out',
+                    right: 'out',
+                    top: 'out',
+                },
+            },
+            number: {
+                density: {
+                    enable: true,
+                },
+                value: 80,
+            },
+            opacity: {
+                value: {
+                    min: 0.1,
+                    max: 0.5,
+                },
+                animation: {
+                    enable: true,
+                    speed: 1,
+                    minimumValue: 0.1,
+                },
+            },
             shape: {
-                text: {
-                    value: ['1', '0'],
+                options: {
+                    character: {
+                        value: ['0', '1'],
+                        font: 'Verdana',
+                        style: '',
+                        weight: '400',
+                        fill: true,
+                    },
+                    char: {
+                        value: ['1', '0'],
+                        font: 'Verdana',
+                        style: '',
+                        weight: '400',
+                        fill: true,
+                    },
+                },
+                type: 'char',
+            },
+            size: {
+                value: 16,
+                animation: {
+                    speed: 10,
+                    minimumValue: 10,
+                },
+            },
+            stroke: {
+                width: 1,
+                color: {
+                    value: '#ffffff',
+                    animation: {
+                        '1': {
+                            count: 0,
+                            enable: false,
+                            offset: 0,
+                            speed: 1,
+                            decay: 0,
+                            sync: true,
+                        },
+                        '0': {
+                            count: 0,
+                            enable: false,
+                            offset: 0,
+                            speed: 1,
+                            decay: 0,
+                            sync: true,
+                        },
+                    },
                 },
             },
         },
-        preset: 'stars',
     }
 
     let onParticlesLoaded = (event) => {
