@@ -6,6 +6,9 @@
 
 <div id="custom-linear-gradient" class="flex relative h-screen w-full">
     <BookAndButtons />
+    <div class="absolute top-[180px] left-1/2 transform -translate-x-1/2 z-10">
+        <div class="text-2xl md:text-4xl lg:text-6xl">Schedule</div>
+    </div>
     <DiveDeeper currentPage="schedule" />
 </div>
 
