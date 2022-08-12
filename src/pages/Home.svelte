@@ -9,7 +9,7 @@
     import LogoTwitter from '../components/svgs/Logos/LogoTwitter.svelte'
     import LogoFacebook from '../components/svgs/Logos/LogoFacebook.svelte'
     import BeachDecor from '../components/svgs/BeachDecor.svelte'
-    export let y
+    // export let y
 
     function toggleAnimation() {
         isAnimationOn.set(!$isAnimationOn)
