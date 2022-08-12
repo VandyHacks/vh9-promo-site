@@ -1,7 +1,29 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
-    import BookAndButtons from '../components/svgs/BookAndButtons.svelte'
+    import Papa from 'papaparse'
+
+    let selectedDay = 1
+    let schedules = []
+    let scheduleOfTheDay = ''
     export let y
+
+    for (let i = 0; i < 3; i++) {
+        Papa.parse(`./schedule/Day${i + 1}.csv`, {
+            download: true,
+            header: true,
+            complete: function (results) {
+                schedules[i] = results.data
+                if (i == 0) {
+                    scheduleOfTheDay = schedules[i]
+                }
+            },
+        })
+    }
+
+    function getScheduleOfTheDay(day) {
+        selectedDay = day
+        scheduleOfTheDay = schedules[day - 1]
+    }
 </script>
 
 <div id="custom-linear-gradient" class="flex relative h-screen w-full">
