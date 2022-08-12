@@ -15,6 +15,9 @@
     import OceanFloor4 from './components/svgs/OceanFloor4.svelte'
     import OceanFloor5 from './components/svgs/OceanFloor5.svelte'
 
+    import Particles from 'svelte-particles'
+    import { loadFull } from 'tsparticles'
+
     let color1 = '#A9D8DB'
     let color2 = '#8FC9CF'
     let color3 = '#495F79'
@@ -22,6 +25,27 @@
     let color5 = '#000'
 
     let y
+
+    let particlesUrl = 'http://foo.bar/particles.json'
+
+    let particlesConfig = {
+        particles: {
+            shape: {
+                text: {
+                    value: ['1', '0'],
+                },
+            },
+        },
+        preset: 'stars',
+    }
+
+    let onParticlesLoaded = (event) => {
+        const particlesContainer = event.detail.particles
+    }
+
+    let particlesInit = async (engine) => {
+        await loadFull(engine)
+    }
 
     //binary code rain
     $: innerHeight = 0
@@ -65,6 +89,14 @@
 />
 <OceanFloor5 color={color5} />
 
+<Particles
+    class="particles"
+    id="tsparticles"
+    options={particlesConfig}
+    on:particlesLoaded={onParticlesLoaded}
+    {particlesInit}
+/>
+
 <style lang="postcss" global>
     @tailwind base;
     @tailwind components;
@@ -74,5 +106,9 @@
         position: absolute;
         font-size: 5vw;
         user-select: none;
+    }
+
+    .particles {
+        z-index: 10;
     }
 </style>
