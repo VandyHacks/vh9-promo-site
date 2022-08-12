@@ -1,5 +1,5 @@
 <script>
-    let color1 = '#C0E6E1'
+    let color1 = '#DAEEF0'
     let color2 = '#C0E6E1'
     let color3 = '#C0E6E1'
     function handleFirst(e) {
