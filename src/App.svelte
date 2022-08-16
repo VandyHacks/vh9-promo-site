@@ -30,6 +30,7 @@
 
     let particlesConfig = {
         particles: {
+            overlap: false,
             color: {
                 value: '#ffffff',
             },

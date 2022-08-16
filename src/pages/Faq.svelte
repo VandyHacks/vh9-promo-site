@@ -10,7 +10,10 @@
         <div
             class="mt-4 pt-2 h-[70vh] sm:h-[65vh] bg-opacity-40 bg-white w-[80vw] mx-auto justify-center border-0 rounded-lg"
         >
-            <div class="m-5 h-[58vh] sm:h-[55vh] overflow-scroll font-inter">
+            <div
+                id="scrollable-content"
+                class="m-5 h-[58vh] sm:h-[55vh] overflow-scroll font-inter overflow-x-hidden"
+            >
                 <ul class="flex flex-col items-left text-left pl-3 md:pl-10">
                     <FaqItem
                         question="What is a hackathon?"
@@ -103,5 +106,16 @@
         background: -webkit-linear-gradient(to bottom, #5f8094, #2a3053 100%);
         position: relative;
         color: white;
+    }
+    #scrollable-content::-webkit-scrollbar {
+        width: 10px;
+    }
+    #scrollable-content::-webkit-scrollbar * {
+        background: transparent;
+        border-radius: 10px;
+    }
+    #scrollable-content::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(255, 0, 0, 0.1) !important;
     }
 </style>
