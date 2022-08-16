@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
     export let question
     export let answer
 
@@ -57,4 +57,4 @@
         -ms-user-select: none;
         user-select: none;
     }
-</style> -->
+</style>
