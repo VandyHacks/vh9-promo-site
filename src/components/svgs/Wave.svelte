@@ -1,7 +1,3 @@
-<script>
-    export let y
-</script>
-
 <div class="h-[200vh] w-screen relative z-[5] pointer-events-none">
     <svg
         class="w-[250vw] md:w-[102vw] h-[100vh] absolute bottom-0 -right-10vw] md:-right-[3px]"
@@ -123,7 +119,7 @@
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stop-color="#EAFEFF" stop-opacity="0.11" />
-                <stop offset="0.739583" stop-color="#E9FDFE" />
+                <stop offset="0.739583" stop-color="#E3FAFD" />
             </linearGradient>
         </defs>
     </svg>

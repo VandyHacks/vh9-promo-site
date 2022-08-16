@@ -6,14 +6,8 @@
     import Speakers from './pages/Speakers.svelte'
     import Faq from './pages/Faq.svelte'
     import Sponsors from './pages/Sponsors.svelte'
-    import { innerHeightVal } from './stores.js'
 
     import Wave from './components/svgs/Wave.svelte'
-    import OceanFloor1 from './components/svgs/OceanFloor1.svelte'
-    import OceanFloor2 from './components/svgs/OceanFloor2.svelte'
-    import OceanFloor3 from './components/svgs/OceanFloor3.svelte'
-    import OceanFloor4 from './components/svgs/OceanFloor4.svelte'
-    import OceanFloor5 from './components/svgs/OceanFloor5.svelte'
 
     import Particles from 'svelte-particles'
     import { loadFull } from 'tsparticles'
@@ -134,37 +128,16 @@
 <Home {y} />
 <Navbar {y} />
 <Wave {y} />
-<About {y} />
-<Schedule {y} />
-<Speakers {y} />
-<Faq {y} />
-<Sponsors {y} />
-
-<OceanFloor1
-    {y}
-    color={color1}
-    topVal={$innerHeightVal * 2}
-    scrollSpeed={0.6}
-/>
-<OceanFloor2
-    {y}
-    color={color2}
-    topVal={$innerHeightVal * 3}
-    scrollSpeed={0.7}
-/>
-<OceanFloor3
-    {y}
-    color={color3}
-    topVal={$innerHeightVal * 3.85}
-    scrollSpeed={0.9}
-/>
-<OceanFloor4
-    {y}
-    color={color4}
-    topVal={$innerHeightVal * 4.4}
-    scrollSpeed={0.9}
-/>
-<OceanFloor5 color={color5} />
+<div
+    class="relative bg-no-repeat bg-center bg-[length:100vw_500vh]"
+    style="background-image: url(png/OceanBackground.png)"
+>
+    <About {y} />
+    <Schedule {y} />
+    <Speakers {y} />
+    <Faq {y} />
+    <Sponsors {y} />
+</div>
 
 <Particles
     class="particles"

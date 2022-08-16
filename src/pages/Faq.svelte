@@ -4,7 +4,7 @@
     export let y
 </script>
 
-<div id="faq" class="flex flex-col h-screen w-screen">
+<div class="relative text-white flex flex-col h-screen w-screen">
     <div class="m-auto z-[1]">
         <div class="text-2xl md:text-4xl lg:text-6xl">FAQ</div>
         <div
@@ -99,14 +99,6 @@
 </div>
 
 <style>
-    #faq {
-        background: linear-gradient(to bottom, #5f8094, #2a3053 100%);
-        background: -o-linear-gradient(to bottom, #5f8094, #2a3053 100%);
-        background: -moz-linear-gradient(to bottom, #5f8094, #2a3053 100%);
-        background: -webkit-linear-gradient(to bottom, #5f8094, #2a3053 100%);
-        position: relative;
-        color: white;
-    }
     #scrollable-content::-webkit-scrollbar {
         width: 10px;
     }

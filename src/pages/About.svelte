@@ -1,13 +1,9 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
-    import LightSource from '../components/svgs/LightSource.svelte'
     export let y
 </script>
 
-<div
-    class="flex relative h-screen w-full bg-gradient-to-b from-[#eafdff] to-[#b6dfe2]"
->
-    <LightSource />
+<div class="flex relative h-screen w-full">
     <div class="m-auto">
         <div class="text-2xl md:text-4xl lg:text-6xl">About</div>
         <div

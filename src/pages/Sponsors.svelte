@@ -3,9 +3,7 @@
     // export let y
 </script>
 
-<div
-    class="flex relative h-screen w-full text-white bg-gradient-to-b from-[#2a3053] to-[#1b2035]"
->
+<div class="flex relative h-screen w-full text-white">
     <div class="absolute bottom-[80px] left-[80px] z-20">
         <TreasureChest />
     </div>
