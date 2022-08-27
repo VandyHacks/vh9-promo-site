@@ -201,7 +201,7 @@
     }
 
     #tsparticles {
-        height: 700vh;
+        height: 680vh;
     }
 
     canvas {
