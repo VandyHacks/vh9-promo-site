@@ -175,7 +175,11 @@
 </div>
 
 <!-- Matrix -->
-<div class="absolute top-0 w-full z-10 {y < 1.5 * innerHeight ? 'hidden' : ''}">
+<div
+    class="absolute pointer-events-none top-0 w-full z-10 {y < 1.5 * innerHeight
+        ? 'hidden'
+        : ''}"
+>
     <Particles
         options={particlesConfig}
         on:particlesLoaded={onParticlesLoaded}
@@ -198,5 +202,9 @@
 
     #tsparticles {
         height: 700vh;
+    }
+
+    canvas {
+        pointer-events: none !important;
     }
 </style>

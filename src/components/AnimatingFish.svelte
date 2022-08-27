@@ -1,5 +1,5 @@
 <!-- Fishes -->
-<div class="absolute top-[200vh] w-full h-[500vh]">
+<div class="absolute pointer-events-none top-[200vh] w-full h-[500vh]">
     <div class="swim-left-container">
         <img
             class="absolute top-[20vh] h-[40px] sm:h-[80px] md:h-[120px] animate_fish right-0"
