@@ -11,6 +11,7 @@
 
     import Particles from 'svelte-particles'
     import { loadFull } from 'tsparticles'
+    import AnimatingFish from './components/AnimatingFish.svelte'
 
     let color1 = '#A9D8DB'
     let color2 = '#8FC9CF'
@@ -23,96 +24,11 @@
     let particlesUrl = 'http://foo.bar/particles.json'
 
     let particlesConfig = {
-        // particles: {
-        //     overlap: false,
-        //     color: {
-        //         value: '#ffffff',
-        //     },
-        //     links: {
-        //         enable: false,
-        //     },
-        //     move: {
-        //         enable: false,
-        //         outModes: {
-        //             bottom: 'out',
-        //             left: 'out',
-        //             right: 'out',
-        //             top: 'out',
-        //         },
-        //     },
-        //     number: {
-        //         density: {
-        //             enable: true,
-        //         },
-        //         value: 20,
-        //     },
-        //     opacity: {
-        //         value: {
-        //             min: 0.1,
-        //             max: 0.6,
-        //         },
-        //         animation: {
-        //             enable: true,
-        //             speed: 1,
-        //             minimumValue: 0.1,
-        //         },
-        //     },
-        //     shape: {
-        //         options: {
-        //             character: {
-        //                 value: ['0', '1'],
-        //                 font: 'Verdana',
-        //                 style: '',
-        //                 weight: '400',
-        //                 fill: true,
-        //             },
-        //             char: {
-        //                 value: ['1', '0'],
-        //                 font: 'Verdana',
-        //                 style: '',
-        //                 weight: '400',
-        //                 fill: true,
-        //             },
-        //         },
-        //         type: 'char',
-        //     },
-        //     size: {
-        //         value: 16,
-        //         animation: {
-        //             speed: 10,
-        //             minimumValue: 10,
-        //         },
-        //     },
-        //     stroke: {
-        //         width: 1,
-        //         color: {
-        //             value: '#ffffff',
-        //             animation: {
-        //                 '1': {
-        //                     count: 0,
-        //                     enable: false,
-        //                     offset: 0,
-        //                     speed: 1,
-        //                     decay: 0,
-        //                     sync: true,
-        //                 },
-        //                 '0': {
-        //                     count: 0,
-        //                     enable: false,
-        //                     offset: 0,
-        //                     speed: 1,
-        //                     decay: 0,
-        //                     sync: true,
-        //                 },
-        //             },
-        //         },
-        //     },
-        // },
         fullScreen: false,
         zIndex: 100,
         particles: {
             number: {
-                value: 20,
+                value: 40,
                 density: {
                     enable: true,
                     value_area: 800,
@@ -122,7 +38,15 @@
                 value: '#ffffff',
             },
             shape: {
-                type: 'circle',
+                character: [
+                    {
+                        fill: true,
+                        value: ['0', '1'],
+                        font: 'Verdana',
+                        style: '',
+                        weight: '400',
+                    },
+                ],
                 stroke: {
                     width: 0,
                     color: '#000000',
@@ -135,6 +59,7 @@
                     width: 100,
                     height: 100,
                 },
+                type: 'char',
             },
             opacity: {
                 value: 0.5,
@@ -147,7 +72,7 @@
                 },
             },
             size: {
-                value: 10,
+                value: 20,
                 random: true,
                 anim: {
                     enable: false,
@@ -249,6 +174,7 @@
     <Sponsors {y} />
 </div>
 
+<!-- Matrix -->
 <div class="absolute top-0 w-full z-10 {y < 1.5 * innerHeight ? 'hidden' : ''}">
     <Particles
         options={particlesConfig}
@@ -256,6 +182,8 @@
         {particlesInit}
     />
 </div>
+
+<AnimatingFish />
 
 <style lang="postcss" global>
     @tailwind base;
