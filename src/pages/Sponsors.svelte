@@ -13,4 +13,8 @@
     >
         <div class="text-white text-2xl md:text-4xl lg:text-6xl">Sponsors</div>
     </div>
+
+    <div class="absolute bottom-[20px] left-[20px] z-20 font-['Futura']">
+        Made with &lt;3 by the VandyHacks team
+    </div>
 </div>
