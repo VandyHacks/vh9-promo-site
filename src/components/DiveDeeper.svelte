@@ -6,7 +6,7 @@
 </script>
 
 <div
-    class="absolute flex w-screen justify-center bottom-0 z-10 text-white font-sans"
+    class="hidden md:flex absolute w-screen justify-center bottom-0 z-10 text-white font-sans"
 >
     <div
         class="flex flex-col items-center {$isAnimationOn

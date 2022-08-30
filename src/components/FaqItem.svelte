@@ -15,38 +15,27 @@
     }
 </script>
 
-<div on:click={toggle} class="noselect">
-    <li class="outer-list font-inter" style="background-image:url('{icon}');">
-        <div class="cursor-pointer text-2xl">
+<div on:click={toggle} class="noselect font-['Futura']">
+    <li
+        class="outer-list list-none m-0 py-2 pl-7 font-inter"
+        style="background-image:url('{icon}');"
+    >
+        <div class="cursor-pointer text-sm md:text-lg lg:text-xl xl:text-2xl">
             {question}
         </div>
     </li>
     {#if expanded}
-        <ul class="inner-list font-inter text-lg">
-            <li class="answer">{answer}</li>
+        <ul class="list-none pl-6 font-inter">
+            <li class="text-sm lg:text-lg xl:text-xl">{answer}</li>
         </ul>
     {/if}
 </div>
 
 <style>
     .outer-list {
-        margin: 0;
-        padding: 16px 0 16px 34px;
-        list-style: none;
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: 20px;
-        font-size: 36px;
-    }
-
-    .inner-list {
-        list-style: none inside;
-        padding-left: 1em;
-        font-size: 0.7em;
-    }
-
-    .answer {
-        padding: 1.25rem 1.25rem 0 1.25rem;
+        background-size: 16px;
     }
 
     .noselect {

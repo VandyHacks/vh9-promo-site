@@ -35,31 +35,31 @@
                 class="absolute flex flex-row space-x-4 -top-14 right-1/2 translate-x-1/2 md:right-[10%] md:translate-x-0"
             >
                 <div
-                    class="w-[100px] {selectedDay == 1
+                    class="w-14 sm:w-20 md:w-28 {selectedDay == 1
                         ? 'bg-[#DAEEF1]'
                         : 'bg-[#BFE6E1]'} pb-10 pt-1 hover:cursor-pointer"
                     on:click={() => getScheduleOfTheDay(1)}
                 >
-                    <p>Oct 21</p>
-                    <p>Friday</p>
+                    <div class="text-sm md:text-lg">Oct 21</div>
+                    <div class="text-sm md:text-lg">Friday</div>
                 </div>
                 <div
-                    class="w-[100px] {selectedDay == 2
+                    class="w-14 sm:w-20 md:w-28 {selectedDay == 2
                         ? 'bg-[#DAEEF1]'
                         : 'bg-[#BFE6E1]'} pb-10 pt-1 hover:cursor-pointer"
                     on:click={() => getScheduleOfTheDay(2)}
                 >
-                    <p>Oct 22</p>
-                    <p>Saturday</p>
+                    <div class="text-sm md:text-lg">Oct 22</div>
+                    <div class="text-sm md:text-lg">Saturday</div>
                 </div>
                 <div
-                    class="w-[100px]  {selectedDay == 3
+                    class="w-14 sm:w-20 md:w-28  {selectedDay == 3
                         ? 'bg-[#DAEEF1]'
                         : 'bg-[#BFE6E1]'} pb-10 pt-1 hover:cursor-pointer"
                     on:click={() => getScheduleOfTheDay(3)}
                 >
-                    <p>Oct 22</p>
-                    <p>Sunday</p>
+                    <div class="text-sm md:text-lg">Oct 23</div>
+                    <div class="text-sm md:text-lg">Sunday</div>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
             <!-- Schedule -->
             <div
                 id="scrollable-content"
-                class="absolute overflow-y-scroll top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] px-10"
+                class="absolute overflow-y-scroll top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] md:px-10"
             >
                 <div
                     class="grid grid-rows-7 divide-y-[1px] divide-black text-left"
@@ -84,12 +84,12 @@
                             class="grid grid-cols-4 divide-x-[1px] divide-black"
                         >
                             <div
-                                class="col-span-3 text-xl md:text-2xl pb-3 pl-4"
+                                class="col-span-3 text-lg md:text-xl pb-3 pl-4"
                             >
                                 Event
                             </div>
                             <div
-                                class="col-span-1 text-xl md:text-2xl pb-3 pl-4"
+                                class="col-span-1 text-lg md:text-xl pb-3 pl-4"
                             >
                                 Time
                             </div>
@@ -101,13 +101,17 @@
                             <div
                                 class="grid grid-cols-4 divide-x-[1px] divide-black"
                             >
-                                <div
-                                    class="col-span-3 text-lg md:text-xl py-2 pl-4"
-                                >
-                                    <div>{schedule.Event}</div>
-                                    <div>{schedule.Location}</div>
+                                <div class="col-span-3 py-2 pl-4">
+                                    <div class="text-sm md:text-lg lg:text-xl ">
+                                        {schedule.Event}
+                                    </div>
+                                    <div class="text-sm md:text-lg lg:text-xl ">
+                                        {schedule.Location}
+                                    </div>
                                 </div>
-                                <div class="col-span-1 italic pl-4 pt-2">
+                                <div
+                                    class="col-span-1 italic pl-4 pt-2 text-sm md:text-lg lg:text-xl "
+                                >
                                     {schedule.Time}
                                 </div>
                             </div>
