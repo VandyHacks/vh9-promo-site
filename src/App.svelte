@@ -175,8 +175,10 @@
 </div>
 
 <!-- Matrix -->
+
 <div
-    class="absolute pointer-events-none top-0 w-full z-10 {y < 1.5 * innerHeight
+    class="hidden md:visible absolute pointer-events-none top-0 w-full z-10 {y <
+    1.5 * innerHeight
         ? 'hidden'
         : ''}"
 >
@@ -187,7 +189,9 @@
     />
 </div>
 
-<AnimatingFish />
+<div class="hidden md:visible">
+    <AnimatingFish />
+</div>
 
 <style lang="postcss" global>
     @tailwind base;
@@ -206,11 +210,5 @@
 
     canvas {
         pointer-events: none !important;
-    }
-
-    @media (max-width: 768px) {
-        * {
-            overflow-x: hidden;
-        }
     }
 </style>
