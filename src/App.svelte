@@ -177,7 +177,7 @@
 <!-- Matrix -->
 
 <div
-    class="hidden md:visible absolute pointer-events-none top-0 w-full z-10 {y <
+    class="hidden md:block absolute pointer-events-none top-0 w-full z-10 {y <
     1.5 * innerHeight
         ? 'hidden'
         : ''}"
@@ -189,7 +189,7 @@
     />
 </div>
 
-<div class="hidden md:visible">
+<div class="hidden md:block">
     <AnimatingFish />
 </div>
 
