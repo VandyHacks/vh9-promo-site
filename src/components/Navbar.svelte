@@ -93,13 +93,13 @@
         </div>
 
         {#if y >= $innerHeightVal / 2}
-            <div class="fixed w-28 h-screen z-10" transition:fade>
+            <!-- <div class="fixed w-28 h-screen z-10" transition:fade>
                 <div
                     class="absolute h-[50%] top-[50%] translate-y-[-50%] border-4 border-teal-400"
                 >
                     <div>Submarine buddy goes here</div>
                 </div>
-            </div>
+            </div> -->
         {/if}
     {/if}
 </MediaQuery>

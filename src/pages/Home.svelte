@@ -17,7 +17,7 @@
 </script>
 
 <div
-    class="h-screen w-screen fixed"
+    class="h-screen w-screen fixed overflow-hidden"
     style="background-color: var(--beach-color);"
 >
     <div class="h-screen flex" style="color: var(--beach-text);">

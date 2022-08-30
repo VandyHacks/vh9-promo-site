@@ -207,4 +207,10 @@
     canvas {
         pointer-events: none !important;
     }
+
+    @media (max-width: 768px) {
+        * {
+            overflow-x: hidden;
+        }
+    }
 </style>

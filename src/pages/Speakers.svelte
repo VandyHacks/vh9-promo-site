@@ -2,17 +2,22 @@
     import DiveDeeper from '../components/DiveDeeper.svelte'
     import Summaries from '../components/svgs/Summaries.svelte'
     import Speakers from '../components/svgs/Speakers.svelte'
-    import Rothschild from '../components/svgs/Rothschild.svelte'
+    import SpeakerPortrait from '../components/svgs/SpeakerPortrait.svelte'
 
-    import { Splide, SplideSlide } from '@splidejs/svelte-splide'
-    import '@splidejs/svelte-splide/css'
-
-    let summary = ['summary 1', 'summary 2', 'summary 3', 'summary 4']
+    let slideNumber = 0
 </script>
 
-<div class="h-screen w-full text-white">
-    <Rothschild />
-    <Speakers />
-    <Summaries class="row-span-2" />
+<div class="flex relative h-screen w-full text-white">
+    <div class="m-auto z-[1]">
+        <div class="text-2xl md:text-4xl lg:text-6xl">Speakers</div>
+        <div class="w-full py-10 font-['Futura'] flex flex-col md:flex-row">
+            <SpeakerPortrait bind:slideNumber />
+
+            <Summaries bind:slideNumber />
+        </div>
+    </div>
+    <!-- <Rothschild /> -->
+    <!-- <Speakers /> -->
+    <!-- <Summaries /> -->
     <DiveDeeper currentPage="speakers" />
 </div>
