@@ -66,7 +66,7 @@
         <DiveDeeper currentPage="wave" />
     </div>
 
-    <div class="absolute p-4 bottom-0 z-10 flex justify-center">
+    <div class="hidden md:flex absolute p-4 bottom-0 z-10 justify-center">
         <label
             for="default-toggle"
             class="inline-flex relative items-center cursor-pointer"

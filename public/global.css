@@ -14,11 +14,11 @@ body {
     text-align: center;
     line-height: 1.5;
     overflow-x: hidden !important;
-    background-color: var(--beach-color);
     background: linear-gradient(
         to bottom,
         var(--beach-color) 0%,
-        black 90%,
+        var(--beach-color) 99%,
+        black 99%,
         #000000
     );
 }
