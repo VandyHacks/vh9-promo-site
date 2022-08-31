@@ -179,7 +179,7 @@
 <div
     class="hidden md:block absolute pointer-events-none top-0 w-full z-10 {y <
     1.5 * innerHeight
-        ? 'hidden'
+        ? 'md:hidden'
         : ''}"
 >
     <Particles
