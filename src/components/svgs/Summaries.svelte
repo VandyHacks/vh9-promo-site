@@ -60,7 +60,7 @@
         class="relative h-[50vh] lg:h-[60vh] bg-opacity-40 bg-white w-[70vw] md:w-[60vw] lg:w-[45vw] rounded-lg"
     >
         <div
-            class="font-['Futura'] text-justify overflow-scroll h-full w-full px-10 py-5 text-sm md:text-md lg:text-lg xl:text-xl"
+            class="font-['Futura'] text-justify overflow-scroll h-full w-full px-3 md:px-6 lg:px-10 py-5 text-sm md:text-md lg:text-lg xl:text-xl"
             id="summary"
         >
             Entrepreneur and Investor <br /> <br /> Jeff Rothschild was co-founder
