@@ -2,7 +2,6 @@
     --beach-color: #fde9c8;
     --beach-text: #6a4c15;
     --ocean-color: #91cdd2;
-    font-size: 16px;
 }
 
 body {
@@ -31,8 +30,4 @@ body {
 @font-face {
     font-family: 'Futura';
     src: url('/fonts/Futura.ttf') format('truetype');
-}
-
-body {
-    font-size: calc(1em + 1vmin);
 }

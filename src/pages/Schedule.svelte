@@ -5,7 +5,6 @@
     let selectedDay = 1
     let schedules = []
     let scheduleOfTheDay = ''
-    export let y
 
     for (let i = 0; i < 3; i++) {
         Papa.parse(`./schedule/Day${i + 1}.csv`, {

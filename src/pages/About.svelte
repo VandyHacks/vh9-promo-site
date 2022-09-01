@@ -1,6 +1,5 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
-    export let y
 </script>
 
 <div class="flex relative h-screen w-full">

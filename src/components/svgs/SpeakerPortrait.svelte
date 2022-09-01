@@ -1,5 +1,5 @@
 <script>
-    import Summaries, { showSlide } from './Summaries.svelte'
+    // import Summaries, { showSlide } from './Summaries.svelte'
 
     export let slideNumber = 0
     let sources = ['speakers/JeffRothschild.png']

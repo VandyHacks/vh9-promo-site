@@ -1,7 +1,6 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
     import Summaries from '../components/svgs/Summaries.svelte'
-    import Speakers from '../components/svgs/Speakers.svelte'
     import SpeakerPortrait from '../components/svgs/SpeakerPortrait.svelte'
 
     let slideNumber = 0
@@ -16,8 +15,5 @@
             <Summaries bind:slideNumber />
         </div>
     </div>
-    <!-- <Rothschild /> -->
-    <!-- <Speakers /> -->
-    <!-- <Summaries /> -->
     <DiveDeeper currentPage="speakers" />
 </div>

@@ -1,7 +1,6 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
     import FaqItem from '../components/FaqItem.svelte'
-    export let y
 </script>
 
 <div class="relative text-white flex flex-col h-screen w-screen">

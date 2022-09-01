@@ -1,6 +1,5 @@
 <script>
     import TreasureChest from '../components/svgs/TreasureChest.svelte'
-    // export let y
 </script>
 
 <div class="flex relative h-screen w-full text-white">
@@ -18,7 +17,9 @@
         </div>
     </div>
 
-    <div class="absolute bottom-[20px] left-[20px] z-20 font-['Futura']">
+    <div
+        class="absolute bottom-[20px] left-[20px] z-20 font-['Futura'] text-sm"
+    >
         Made with &lt;3 by the VandyHacks team
     </div>
 </div>

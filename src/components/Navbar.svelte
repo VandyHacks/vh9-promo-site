@@ -107,12 +107,12 @@
 <!-- Mobile -->
 <MediaQuery query="(max-width: 768px)" let:matches>
     {#if matches}
-        <div class="fixed z-[1] top-[30px] left-[30px]" on:click={openNavbar}>
+        <div class="fixed z-40 top-[30px] left-[30px]" on:click={openNavbar}>
             <Hamburger />
         </div>
         {#if $isNavbarOpen}
             <div
-                class="fixed z-10 top-0 left-0 w-[55vw] h-[100%] bg-white shadow-black shadow-lg rounded-xl"
+                class="fixed z-50 top-0 left-0 w-[55vw] h-[100%] bg-white shadow-black shadow-lg rounded-xl"
                 transition:fly={{ duration: 200, x: -200 }}
             >
                 <div
