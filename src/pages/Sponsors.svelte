@@ -1,5 +1,5 @@
 <script>
-    import TreasureChest from '../components/svgs/TreasureChest.svelte'
+    import TreasureChest from '../components/TreasureChest.svelte'
 </script>
 
 <div class="flex relative h-screen w-full text-white">

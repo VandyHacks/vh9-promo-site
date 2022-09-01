@@ -19,8 +19,8 @@
     import { fade, fly } from 'svelte/transition'
     import { pageOrder, innerHeightVal } from '../stores.js'
     import MediaQuery from '../MediaQuery.svelte'
-    import Hamburger from '../components/svgs/Hamburger.svelte'
-    import CrossCircle from '../components/svgs/CrossCircle.svelte'
+    import Hamburger from './Hamburger.svelte'
+    import CrossCircle from './CrossCircle.svelte'
     export let y
 
     // Navigate to section specified by page url, if available. Otherwise, remain at the top.

@@ -1,6 +1,6 @@
 <script>
     import Navbar from './components/Navbar.svelte'
-    import Wave from './components/svgs/Wave.svelte'
+    import Wave from './components/Wave.svelte'
 
     import Home from './pages/Home.svelte'
     import About from './pages/About.svelte'

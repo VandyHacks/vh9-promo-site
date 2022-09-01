@@ -1,7 +1,7 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
-    import Summaries from '../components/svgs/Summaries.svelte'
-    import SpeakerPortrait from '../components/svgs/SpeakerPortrait.svelte'
+    import Summaries from '../components/Summaries.svelte'
+    import SpeakerPortrait from '../components/SpeakerPortrait.svelte'
 
     let slideNumber = 0
 </script>

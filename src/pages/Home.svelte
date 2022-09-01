@@ -1,13 +1,13 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
-    import MainLogo from '../components/svgs/MainLogo.svelte'
-    import LogoInstagram from '../components/svgs/Logos/LogoInstagram.svelte'
-    import LogoYoutube from '../components/svgs/Logos/LogoYoutube.svelte'
-    import LogoGithub from '../components/svgs/Logos/LogoGithub.svelte'
-    import LogoDiscord from '../components/svgs/Logos/LogoDiscord.svelte'
-    import LogoTwitter from '../components/svgs/Logos/LogoTwitter.svelte'
-    import LogoFacebook from '../components/svgs/Logos/LogoFacebook.svelte'
-    import BeachDecor from '../components/svgs/BeachDecor.svelte'
+    import MainLogo from '../components/logos/MainLogo.svelte'
+    import LogoInstagram from '../components/logos/LogoInstagram.svelte'
+    import LogoYoutube from '../components/logos/LogoYoutube.svelte'
+    import LogoGithub from '../components/logos/LogoGithub.svelte'
+    import LogoDiscord from '../components/logos/LogoDiscord.svelte'
+    import LogoTwitter from '../components/logos/LogoTwitter.svelte'
+    import LogoFacebook from '../components/logos/LogoFacebook.svelte'
+    import BeachDecor from '../components/BeachDecor.svelte'
 </script>
 
 <div
