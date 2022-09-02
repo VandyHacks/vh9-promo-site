@@ -71,7 +71,9 @@
         <DiveDeeper currentPage="wave" />
     </div>
 
-    <div class="absolute p-4 bottom-0 z-10 flex justify-center">
+    <div
+        class="invisible sm:visible absolute p-4 bottom-0 z-10 flex justify-center"
+    >
         <label
             for="default-toggle"
             class="inline-flex relative items-center cursor-pointer"
@@ -94,7 +96,7 @@
             />
         </label>
         <div
-            class="flex items-center invisible sm:visible ml-2 text-md md:text-lg lg:text-xl text-white"
+            class="flex items-center ml-2 text-md md:text-lg lg:text-xl text-white"
         >
             Animations
         </div>
