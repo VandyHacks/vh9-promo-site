@@ -1,6 +1,7 @@
 <script>
     import DiveDeeper from '../components/DiveDeeper.svelte'
     import MainLogo from '../components/logos/MainLogo.svelte'
+    import { isAnimationOn } from '../stores.js'
     import LogoInstagram from '../components/logos/LogoInstagram.svelte'
     import LogoYoutube from '../components/logos/LogoYoutube.svelte'
     import LogoGithub from '../components/logos/LogoGithub.svelte'
@@ -8,6 +9,10 @@
     import LogoTwitter from '../components/logos/LogoTwitter.svelte'
     import LogoFacebook from '../components/logos/LogoFacebook.svelte'
     import BeachDecor from '../components/BeachDecor.svelte'
+
+    function toggleAnimation() {
+        isAnimationOn.set(!$isAnimationOn)
+    }
 </script>
 
 <div
@@ -64,5 +69,34 @@
 
     <div class="fixed items-center">
         <DiveDeeper currentPage="wave" />
+    </div>
+
+    <div class="absolute p-4 bottom-0 z-10 flex justify-center">
+        <label
+            for="default-toggle"
+            class="inline-flex relative items-center cursor-pointer"
+        >
+            <input
+                type="checkbox"
+                value=""
+                id="default-toggle"
+                class="sr-only peer"
+                on:click={toggleAnimation}
+                checked
+            />
+            <div
+                class="w-11 h-6 md:w-14 md:h-8 lg:w-16 lg:h-10
+					after:h-5 after:w-5 md:after:h-6 md:after:w-6 lg:after:h-7 lg:after:w-7
+					after:top-[2px] after:left-[2px] md:after:top-[4px] md:after:left-[4px] lg:after:left-[4px] lg:after:top-[6px]
+					bg-[#8E8E8E] peer-focus:outline-none rounded-full 
+					peer peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:bg-[#26305D] 
+					after:content-[''] after:absolute after:bg-white after:border-gray-300 after:border after:rounded-full after:transition-all"
+            />
+        </label>
+        <div
+            class="flex items-center invisible sm:visible ml-2 text-md md:text-lg lg:text-xl text-white"
+        >
+            Animations
+        </div>
     </div>
 </div>

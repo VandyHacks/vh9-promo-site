@@ -13,3 +13,5 @@ export const pageOrder = readable({
 export let innerHeightVal = writable(window.innerHeight)
 
 export let isNavbarOpen = writable(false)
+
+export let isAnimationOn = writable(true)

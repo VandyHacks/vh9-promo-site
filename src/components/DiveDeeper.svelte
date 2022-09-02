@@ -1,13 +1,18 @@
 <script>
     import { pageOrder } from '../stores.js'
     import { navigateTo } from './Navbar.svelte'
+    import { isAnimationOn } from '../stores.js'
     export let currentPage
 </script>
 
 <div
     class="hidden md:flex absolute w-screen justify-center bottom-0 z-10 text-white font-sans"
 >
-    <div class="flex flex-col items-center animate-bounce">
+    <div
+        class="flex flex-col items-center {$isAnimationOn
+            ? 'animate-bounce'
+            : ''}"
+    >
         <div
             class="text-xl md:text-2xl lg:text-3xl tracking-widest hover:cursor-pointer"
             on:click={navigateTo($pageOrder[currentPage] + 1)}
