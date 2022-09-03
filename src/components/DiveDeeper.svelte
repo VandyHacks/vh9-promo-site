@@ -10,7 +10,7 @@
 >
     <div
         class="flex flex-col items-center {$isAnimationOn
-            ? 'animate-bounce'
+            ? 'animate-bounce -mb-5'
             : ''}"
     >
         <div

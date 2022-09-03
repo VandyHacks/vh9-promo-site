@@ -22,6 +22,10 @@
     function getScheduleOfTheDay(day) {
         selectedDay = day
         scheduleOfTheDay = schedules[day - 1]
+
+        // Reset scroll when changing page
+        let scheduleBox = document.getElementById('scrollable-content')
+        scheduleBox.scrollTop = 0
     }
 </script>
 

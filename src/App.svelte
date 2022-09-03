@@ -63,8 +63,15 @@
         },
     }
 
+    let isChrome = Boolean(window.chrome)
+    isAnimationOn.set(isChrome)
+
     let particlesInit = async (engine) => {
         await loadFull(engine)
+    }
+
+    function toggleAnimation() {
+        isAnimationOn.set(!$isAnimationOn)
     }
 
     $: innerHeight = 0
@@ -105,6 +112,35 @@
         <div />
     {/if}
 </MediaQuery>
+
+<div class="invisible sm:visible fixed p-4 bottom-2 z-50 flex justify-center">
+    <label
+        for="default-toggle"
+        class="inline-flex relative items-center cursor-pointer"
+    >
+        <input
+            type="checkbox"
+            value=""
+            id="default-toggle"
+            class="sr-only peer"
+            on:click={toggleAnimation}
+            checked={isChrome}
+        />
+        <div
+            class="w-11 h-6 md:w-14 md:h-8 lg:w-16 lg:h-10
+					after:h-5 after:w-5 md:after:h-6 md:after:w-6 lg:after:h-7 lg:after:w-7
+					after:top-[2px] after:left-[2px] md:after:top-[4px] md:after:left-[4px] lg:after:left-[4px] lg:after:top-[6px]
+					bg-[#8E8E8E] peer-focus:outline-none rounded-full 
+					peer peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:bg-[#26305D] 
+					after:content-[''] after:absolute after:bg-white after:border-gray-300 after:border after:rounded-full after:transition-all"
+        />
+    </label>
+    <div
+        class="flex items-center ml-2 text-md md:text-lg lg:text-xl text-white"
+    >
+        Animations
+    </div>
+</div>
 
 <style lang="postcss" global>
     @tailwind base;
