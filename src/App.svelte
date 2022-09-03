@@ -88,7 +88,7 @@
 
 <!-- Animation -->
 <MediaQuery query="(min-width: 769px)" let:matches>
-    {#if matches && isAnimationOn}
+    {#if matches && $isAnimationOn}
         {#if y > 1.4 * innerHeight}
             <div class="block absolute pointer-events-none top-0 w-full z-10">
                 <Particles options={particlesConfig} {particlesInit} />
