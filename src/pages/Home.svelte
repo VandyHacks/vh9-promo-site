@@ -8,17 +8,6 @@
     import LogoTwitter from '../components/logos/LogoTwitter.svelte'
     import LogoFacebook from '../components/logos/LogoFacebook.svelte'
     import BeachDecor from '../components/BeachDecor.svelte'
-    let applyText = 'Apply';
-    let backgroundButton = '#6a4c15';
-	
-	function handleMouseOver(e) {
-		applyText = 'Coming Soon!';
-        backgroundButton = '#736D6D';
-	}
-	function handleMouseOut(e) {
-		applyText = 'Apply';
-        backgroundButton = '#6a4c15';
-	}
 </script>
 
 <div
@@ -49,14 +38,12 @@
                 target="_blank"
                 class="place-self-center"
             >
-                <!-- svelte-ignore a11y-mouse-events-have-key-events -->
                 <div
                     
-                    class="text-white w-1000 md:w-32 lg:w-40 h-10 md:h-12 lg:h-14 text-xl md:text-2xl lg:text-3xl pt-1 lg:pt-2 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-pointer"
-                    style="background-color:{backgroundButton}; var(--beach-text); font-family: Futura;"
-                    on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}
+                class="text-white w-24 md:w-32 lg:w-40 h-10 md:h-12 lg:h-14 text-xl md:text-2xl lg:text-3xl pt-1 lg:pt-2 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-pointer"
+                style="background-color:#736D6D; var(--beach-text); font-family: Futura;"
                 >
-                    {applyText}
+                    Applications Opening Soon!
                 </div>
             </a>
             <div
