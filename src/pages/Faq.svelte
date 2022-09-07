@@ -31,6 +31,10 @@
                         answer="Not to worry! A few days before the event, you'll receive an email with a link to our hacker guide, which will contain all the information you need. During the event, our team will be available to answer any questions. As always, feel free to email us at info@vandyhacks.org if you have any questions!"
                     />
                     <FaqItem
+                        question="What is the COVID-19 Policy?"
+                        answer="VandyHacks is adhering to all Vanderbilt University policies. You can find more information about those policies <a style='color: #335dd6;' target='_blank' href='https://www.vanderbilt.edu/healthwellness/public-health/covid19/'>here</a>."
+                    />
+                    <FaqItem
                         question="What should I bring?"
                         answer="A device you can write code on, and any chargers you might need on-site! If you are traveling from outside of Vanderbilt, bring any supplies you would use on a two-night trip!"
                     />
@@ -72,7 +76,7 @@
                     />
                     <FaqItem
                         question="Am I eligible to win a prize?"
-                        answer="Teams of up to 4 individuals who submit a project are eligible to win a prize. Any attendee is eligible to win, but in order to receive a prize, students must hold unrestricted work authorization in the United States."
+                        answer="Teams of up to 4 individuals who submit a project are eligible to win a prize. Any attendee is eligible to win, but in order to receive a prize, at least one team member must hold unrestricted work authorization in the United States."
                     />
                     <FaqItem
                         question="What if I am interested in being a mentor or a judge?"

@@ -15,18 +15,21 @@
     }
 </script>
 
-<div on:click={toggle} class="noselect font-['Futura']">
+<div class="noselect font-['Futura']">
     <li
         class="outer-list list-none m-0 py-2 pl-7 font-inter"
         style="background-image:url('{icon}');"
     >
-        <div class="cursor-pointer text-sm md:text-lg lg:text-xl xl:text-2xl">
+        <div
+            on:click={toggle}
+            class="cursor-pointer text-sm md:text-lg lg:text-xl xl:text-2xl"
+        >
             {question}
         </div>
     </li>
     {#if expanded}
         <ul class="list-none pl-6 font-inter">
-            <li class="text-sm lg:text-lg xl:text-xl">{answer}</li>
+            <li class="text-sm lg:text-lg xl:text-xl">{@html answer}</li>
         </ul>
     {/if}
 </div>
