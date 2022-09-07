@@ -16,79 +16,71 @@
                 <ul class="flex flex-col items-left text-left pl-3 md:pl-10">
                     <FaqItem
                         question="What is a hackathon?"
-                        answer="Hackathons are events where students from across the country come together for a weekend of innovation and creativity. Participants have 36 hours to create anything that shows off their creativity and passion for development. You may choose any platform, programming language, or format to show your stuff. You can even present a storyboard or idea; there’s no end to the possibilities!"
+                        answer="Hackathons are events where students across the country come together for a weekend of innovation and creativity. Participants at VandyHacks have 36 hours to create anything that shows off their creativity and passion! You may choose any platform, programming language, or format to show off to our judges - you can even present a storyboard or an idea! At VandyHacks, there's no end to the possibilities."
                     />
                     <FaqItem
-                        question="How does registration work?"
-                        answer="Sign in, and submit your application at apply.vandyhacks.org! You'll also be able to check the status of your application on our registration portal."
+                        question="How do I register?"
+                        answer="When applications are open, you will be able to sign in to apply.vandyhacks.org, or click our application button. You'll be able to check the status of your application on the registration portal as well."
                     />
                     <FaqItem
                         question="When is the registration deadline?"
-                        answer="Registration closes on October 3rd at 11:59pm CDT."
+                        answer="Registration for non-Vanderbilt students closes on October 7th, while registration for Vanderbilt students closes on October 16th. However, some benefits (like travel reimbursement) have earlier deadlines, so we encourage you to apply early!"
                     />
                     <FaqItem
                         question="What if I've never been to a hackathon?"
-                        answer="Not to worry! A few days before the event, you’ll receive an email with a link to our hacker guide, which will contain all the information you need to make the most out of your weekend. During the event, the VandyHacks Team will be around to help answer any questions. As always, feel free to email us at info@vandyhacks.org, or reach out on Discord."
+                        answer="Not to worry! A few days before the event, you'll receive an email with a link to our hacker guide, which will contain all the information you need. During the event, our team will be available to answer any questions. As always, feel free to email us at info@vandyhacks.org if you have any questions!"
                     />
                     <FaqItem
-                        question="What do I need?"
-                        answer="Some kind of device you can write code on and an internet connection!"
+                        question="What should I bring?"
+                        answer="A device you can write code on, and any chargers you might need on-site! If you are traveling from outside of Vanderbilt, bring any supplies you would use on a two-night trip!"
                     />
                     <FaqItem
                         question="How are teams formed? Do I need a team?"
-                        answer="Teams are formed in the #team-matching channel on Discord where you can find people that share interests, and get building! We'll also provide a virtual space to meet teams. However, teams are not required, so feel free to work individually."
+                        answer="We'll provide an in-person event specifically geared towards team formation! There's also plenty of opportunity to meet people and chat about interests organically at the start of the event. However, teams are not required - feel free to work individually!"
                     />
                     <FaqItem
                         question="Will there be other activities besides hacking?"
-                        answer="Of course! We'll have workshops you can learn from, sponsored events you can network at, virtual game nights where you can meet other hackers, and so much more! We will have the complete schedule on our website soon!"
+                        answer="Yes! Our committees have been working hard on creating the best workshops, sponsor networking events, mini-events where you can meet other hackers, and so much more! Our full schedule will be live soon."
                     />
                     <FaqItem
-                        question="Can I submit my older projects?"
-                        answer="You are free to work on any project you like; however, we require that all Devpost submissions be projects that were started and made during our hackathon and uniquely for VandyHacks VIII."
+                        question="Can I submit older projects?"
+                        answer="We require that all submissions be projects that were started, made during, and presented uniquely for  VandyHacks IX."
                     />
                     <FaqItem
-                        question="Can teams be a mix of virtual and in-person hackers?"
-                        answer="Yes!"
+                        question="Can I participate in-person? How about virtually?"
+                        answer="VandyHacks is open to in-person hackers only. We are providing travel reimbursement on a distance-based tier system, and are so excited to see you all in-person this year!"
                     />
                     <FaqItem
-                        question="Who can participate in-person?"
-                        answer="Due to Vanderbilt University's COVID-19 protocols and regulations, only Vanderbilt students can attend VandyHacks VIII in-person. We will make sure that virtual hackers still have a great experience, though! All project submission and judging will be held online to ensure fairness, and mini events will have online equivalents."
+                        question="Where is the event? How can I get there?"
+                        answer="VandyHacks will be held in the Engineering and Science Building at Vanderbilt University. Hackers commuting to Vanderbilt via car will have access to parking. Vanderbilt is also close to public transportation, and the Nashville airport."
                     />
                     <FaqItem
-                        question="What does a virtual hackathon mean?"
-                        answer="An entirely remote hackathon encompasses everything that an in-person hackathon has, except now you can do it from the comfort of your own bedroom! This includes a Discord server to meet other hackers, pre-recorded workshops, virtual game nights, and a live stream of the closing ceremony."
+                        question="Is there travel reimbursement? How do I apply?"
+                        answer="Hackers need to express interest in travel reimbursement on the VandyHacks application. An additional form will be sent to determine distance, eligibility, and logistics. Restrictions apply! Hackers who complete the form after October 1st will be ineligible for reimbursement"
                     />
                     <FaqItem
                         question="Where can I find the Discord invite?"
-                        answer="Once we've approved your application, we'll send you an email with the invitation to the Discord server. The invitation may end up in your spam folder - if it's still not there, feel free to send us an email at info@vandyhacks.org!"
+                        answer="Once we've approved your application, you'll receive all of the details you need on joining the Discord server!"
                     />
                     <FaqItem
                         question="Who can apply?"
-                        answer="Anyone who is 18 years or older and is currently enrolled in college or university with a valid student ID. This means both international and non-Vandy students are welcome, as well!"
+                        answer="Anyone who is 18 or older and currently enrolled in a college or university with a valid student ID."
                     />
                     <FaqItem
-                        question="I have no coding experience. Can I still attend?"
-                        answer="Even more reason for you to come! We will be hosting beginners' workshops for you to get started, and our mentors can help you out along the way. We greatly encourage new hackers to attend, and no prior experience is necessary!"
-                    />
-                    <FaqItem
-                        question="I'm currently residing outside of the U.S. Can I still attend?"
-                        answer="Yes, you can still attend! Due to shipping restrictions, if you reside outside the U.S., we will be unable to send you any swag items or physical prizes. However, other than that, you are fully able to participate in all of the hacking and the other events we will be holding!"
-                    />
-                    <FaqItem
-                        question="How do I submit a project?"
-                        answer="This year, we'll be submitting projects on Devpost. More detailed instructions on project submission will be featured in our hacker guide."
+                        question="Is the event free?"
+                        answer="VandyHacks is completely free to participants thanks to our corporate sponsors once you arrive on-site! This includes lodging, food, and swag."
                     />
                     <FaqItem
                         question="Am I eligible to win a prize?"
-                        answer="If you're currently living in the U.S. and study at a university in the U.S., you are eligible to win and receive a prize. If you're currently living outside the U.S. but study at a university inside the U.S., you are eligible to win but ineligible to receive a prize. If you currently live outside the U.S. and study at a university outside the U.S., you are ineligible to win or receive a prize, but you are still able to participate in all other hackathon festivities."
+                        answer="Teams of up to 4 individuals who submit a project are eligible to win a prize. Any attendee is eligible to win, but in order to receive a prize, students must hold unrestricted work authorization in the United States."
                     />
                     <FaqItem
-                        question="What if I'm interested in being a mentor?"
-                        answer="Send us an email at info@vandyhacks.org!"
+                        question="What if I am interested in being a mentor or a judge?"
+                        answer="Email us at info@vandyhacks.org"
                     />
                     <FaqItem
                         question="I have more questions!"
-                        answer="Send us an email at info@vandyhacks.org! We'll be happy to answer!"
+                        answer="Email us at info@vandyhacks.org"
                     />
                 </ul>
             </div>
