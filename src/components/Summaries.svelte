@@ -1,9 +1,9 @@
 <script context="module">
     let summaries = [
         "Entrepreneur and Investor <br /> <br /> Jeff Rothschild was co-founder of the storage software company Veritas Software and the online gaming company Mpath Interactive. Jeff joined Facebook in 2005 as VP Infrastructure Enginereering and spent 10 years focused on scalability, availability, and performance. Since leaving Facebook in 2015, Jeff has been working as an investor and mentor to entrepreneurs and is on the board of Pure Storage. Jeff also serves as Vice-Chair of the Board of Trust of Vanderbilt University, where he had earned his BA in Psychology and MS in Computer Science. Jeff's philanthropic and impact investing activities include educational projects supporting disadvantaged students, a shoe company in Guatemala, an ophthalmologic hospital providing restorative eye surgery in western Kenya, and farmers cooperatives and credit unions, also in Kenya.",
-        'summary 2',
-        'summary 3',
-        'summary 4',
+        'TBD',
+        'TBD',
+        'TBD',
     ]
     export let slideNumber = 0
     let slideMax = 3
@@ -97,3 +97,17 @@
         </svg>
     </button>
 </div>
+
+<style>
+    #summary::-webkit-scrollbar {
+        width: 10px;
+    }
+    #summary::-webkit-scrollbar * {
+        background: transparent;
+        border-radius: 10px;
+    }
+    #summary::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(255, 0, 0, 0.1) !important;
+    }
+</style>
