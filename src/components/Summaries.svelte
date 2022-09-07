@@ -1,44 +1,31 @@
 <script context="module">
+    import { navigatePotrait } from './SpeakerPortrait.svelte'
+
     let summaries = [
-        "Entrepreneur and Investor <br /> <br /> Jeff Rothschild was co-founder of the storage software company Veritas Software and the online gaming company Mpath Interactive. Jeff joined Facebook in 2005 as VP Infrastructure Enginereering and spent 10 years focused on scalability, availability, and performance. Since leaving Facebook in 2015, Jeff has been working as an investor and mentor to entrepreneurs and is on the board of Pure Storage. Jeff also serves as Vice-Chair of the Board of Trust of Vanderbilt University, where he had earned his BA in Psychology and MS in Computer Science. Jeff's philanthropic and impact investing activities include educational projects supporting disadvantaged students, a shoe company in Guatemala, an ophthalmologic hospital providing restorative eye surgery in western Kenya, and farmers cooperatives and credit unions, also in Kenya.",
-        'TBD',
-        'TBD',
-        'TBD',
+        'Exciting speaker series coming to you soon! Stay tuned.',
+        "We won't actually have Nemo as our speaker, but we have speakers as exciting as Nemo!",
+        // 'TBD',
+        // 'TBD',
     ]
     export let slideNumber = 0
-    let slideMax = 3
+    let slideMax = 2
 
-    export function showSlide(x) {
-        if (slideNumber != x) {
-            slideNumber = x
-        }
-        document.getElementById('summary').innerHTML = summaries[slideNumber]
-    }
-
-    export function getSlideNumber() {
-        return slideNumber
-    }
-
-    function navigate(isForward) {
+    function navigateSummary(isForward) {
         if (isForward) {
-            if (slideNumber == slideMax) {
-                slideNumber = 0
-            } else {
-                slideNumber++
-            }
+            slideNumber = (slideNumber + 1) % slideMax
         } else {
-            if (slideNumber == 0) {
-                slideNumber = slideMax
-            } else {
-                slideNumber--
-            }
+            slideNumber = (slideNumber - 1 + slideMax) % slideMax
         }
         document.getElementById('summary').innerHTML = summaries[slideNumber]
+        navigatePotrait(isForward)
     }
 </script>
 
 <div class="flex flex-row w-fit md:w-[50vw] mx-auto">
-    <button class="relative mr-5 rotate-180" on:click={() => navigate(false)}>
+    <button
+        class="relative mr-5 rotate-180"
+        on:click={() => navigateSummary(false)}
+    >
         <svg
             z-index="20"
             width="29"
@@ -63,22 +50,10 @@
             class="font-['Futura'] text-justify overflow-scroll h-full w-full px-3 md:px-6 lg:px-10 py-5 text-sm md:text-md lg:text-lg xl:text-xl"
             id="summary"
         >
-            Entrepreneur and Investor <br /> <br /> Jeff Rothschild was co-founder
-            of the storage software company Veritas Software and the online gaming
-            company Mpath Interactive. Jeff joined Facebook in 2005 as VP Infrastructure
-            Enginereering and spent 10 years focused on scalability, availability,
-            and performance. Since leaving Facebook in 2015, Jeff has been working
-            as an investor and mentor to entrepreneurs and is on the board of Pure
-            Storage. Jeff also serves as Vice-Chair of the Board of Trust of Vanderbilt
-            University, where he had earned his BA in Psychology and MS in Computer
-            Science. Jeff's philanthropic and impact investing activities include
-            educational projects supporting disadvantaged students, a shoe company
-            in Guatemala, an ophthalmologic hospital providing restorative eye surgery
-            in western Kenya, and farmers cooperatives and credit unions, also in
-            Kenya.
+            {summaries[0]}
         </div>
     </div>
-    <button class="relative ml-5" on:click={() => navigate(true)}>
+    <button class="relative ml-5" on:click={() => navigateSummary(true)}>
         <svg
             z-index="20"
             width="29"
