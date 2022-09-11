@@ -37,13 +37,16 @@
                     October 21 - 23 | Nashville, TN
                 </div>
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <!-- ADD IN APPLICATION LINK HERE WHEN AVAILABLE -->
-                <a target="_blank" class="place-self-center">
+                <a
+                    href="https://apply.vandyhacks.com"
+                    target="_blank"
+                    class="place-self-center"
+                >
                     <div
-                        class="text-white w-32 md:w-40 lg:w-48 h-10 md:h-14 lg:h-14 text-sm md:text-lg lg:text-xl pt-0 lg:pt-0 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-not-allowed"
-                        style="background-color:#736D6D; var(--beach-text); font-family: Futura;"
+                        class="text-white w-32 md:w-40 lg:w-48 h-10 md:h-14 lg:h-14 text-xl md:text-2xl lg:text-3xl pt-1 lg:pt-2 mt-3 place-self-center drop-shadow-xl rounded-lg"
+                        style="background-color: var(--beach-text); font-family: Futura;"
                     >
-                        Applications Opening Soon!
+                        Apply
                     </div>
                 </a>
                 <div
