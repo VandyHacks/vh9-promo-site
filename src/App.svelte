@@ -79,7 +79,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight />
 
-<Home />
+<Home {y} />
 <Navbar {y} />
 <Wave />
 <div

@@ -8,59 +8,64 @@
     import LogoTwitter from '../components/logos/LogoTwitter.svelte'
     import LogoFacebook from '../components/logos/LogoFacebook.svelte'
     import BeachDecor from '../components/BeachDecor.svelte'
+    import { innerHeightVal } from '../stores.js'
+
+    export let y
 </script>
 
-<div
-    class="h-screen w-screen fixed overflow-hidden"
-    style="background-color: var(--beach-color);"
->
-    <div class="h-screen flex" style="color: var(--beach-text);">
-        <div class="flex flex-col justify-center content-center m-auto">
-            <div
-                class="w-32 sm:w-36 md:w-44 lg:w-52 xl:w-56 2xl:w-[10vw] place-self-center"
-            >
-                <MainLogo />
-            </div>
-            <div
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-4 pb-2 md:pt-6 md:pb-4"
-            >
-                VANDYHACKS IX
-            </div>
-            <div
-                class="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-[1.5vw]"
-                style="font-family: Futura;"
-            >
-                October 21 - 23 | Nashville, TN
-            </div>
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <!-- ADD IN APPLICATION LINK HERE WHEN AVAILABLE -->
-            <a target="_blank" class="place-self-center">
+{#if y < $innerHeightVal * 1.5}
+    <div
+        class="h-screen w-screen fixed overflow-hidden"
+        style="background-color: var(--beach-color);"
+    >
+        <div class="h-screen flex" style="color: var(--beach-text);">
+            <div class="flex flex-col justify-center content-center m-auto">
                 <div
-                    class="text-white w-32 md:w-40 lg:w-48 h-10 md:h-14 lg:h-14 text-sm md:text-lg lg:text-xl pt-0 lg:pt-0 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-not-allowed"
-                    style="background-color:#736D6D; var(--beach-text); font-family: Futura;"
+                    class="w-32 sm:w-36 md:w-44 lg:w-52 xl:w-56 2xl:w-[10vw] place-self-center"
                 >
-                    Applications Opening Soon!
+                    <MainLogo />
                 </div>
-            </a>
-            <div
-                id=""
-                class="flex justify-center items-center mt-4 space-x-3 md:space-x-6 lg:space-x-8"
-            >
-                <LogoInstagram />
-                <LogoYoutube />
-                <LogoGithub />
-                <LogoDiscord />
-                <LogoTwitter />
-                <LogoFacebook />
+                <div
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-4 pb-2 md:pt-6 md:pb-4"
+                >
+                    VANDYHACKS IX
+                </div>
+                <div
+                    class="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-[1.5vw]"
+                    style="font-family: Futura;"
+                >
+                    October 21 - 23 | Nashville, TN
+                </div>
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <!-- ADD IN APPLICATION LINK HERE WHEN AVAILABLE -->
+                <a target="_blank" class="place-self-center">
+                    <div
+                        class="text-white w-32 md:w-40 lg:w-48 h-10 md:h-14 lg:h-14 text-sm md:text-lg lg:text-xl pt-0 lg:pt-0 mt-3 place-self-center drop-shadow-xl rounded-lg hover:cursor-not-allowed"
+                        style="background-color:#736D6D; var(--beach-text); font-family: Futura;"
+                    >
+                        Applications Opening Soon!
+                    </div>
+                </a>
+                <div
+                    id=""
+                    class="flex justify-center items-center mt-4 space-x-3 md:space-x-6 lg:space-x-8"
+                >
+                    <LogoInstagram />
+                    <LogoYoutube />
+                    <LogoGithub />
+                    <LogoDiscord />
+                    <LogoTwitter />
+                    <LogoFacebook />
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="absolute w-1/3 h-3/4 top-20 left-10">
-        <BeachDecor />
-    </div>
+        <div class="absolute w-1/3 h-3/4 top-20 left-10">
+            <BeachDecor />
+        </div>
 
-    <div class="fixed items-center">
-        <DiveDeeper currentPage="wave" />
+        <div class="fixed items-center">
+            <DiveDeeper currentPage="wave" />
+        </div>
     </div>
-</div>
+{/if}
