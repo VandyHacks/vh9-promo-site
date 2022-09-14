@@ -17,13 +17,11 @@
 
 <div class="noselect font-['Futura']">
     <li
-        class="outer-list list-none m-0 py-2 pl-7 font-inter"
+        class="hover:cursor-pointer outer-list list-none m-0 py-2 pl-7 font-inter"
         style="background-image:url('{icon}');"
+        on:click={toggle}
     >
-        <div
-            on:click={toggle}
-            class="cursor-pointer text-sm md:text-lg lg:text-xl xl:text-2xl"
-        >
+        <div class="text-sm md:text-lg lg:text-xl xl:text-2xl">
             {question}
         </div>
     </li>

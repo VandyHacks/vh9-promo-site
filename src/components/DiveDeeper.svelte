@@ -14,7 +14,7 @@
             : ''}"
     >
         <div
-            class="text-xl md:text-2xl lg:text-3xl tracking-widest hover:cursor-pointer"
+            class="text-lg md:text-xl lg:text-2xl tracking-widest hover:cursor-pointer"
             on:click={navigateTo($pageOrder[currentPage] + 1)}
         >
             Dive Deeper
