@@ -24,7 +24,7 @@
                     />
                     <FaqItem
                         question="When is the registration deadline?"
-                        answer="Registration for non-Vanderbilt students closes on October 7th, while registration for Vanderbilt students closes on October 16th. However, some benefits (like travel reimbursement) have earlier deadlines, so we encourage you to apply early!"
+                        answer="Registration officially closes on October 14th. However, benefits like travel reimbursement have earlier deadlines (September 30th), so we encourage you to apply early!"
                     />
                     <FaqItem
                         question="What if I've never been to a hackathon?"
