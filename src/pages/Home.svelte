@@ -38,7 +38,7 @@
                 </div>
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a
-                    href="https://apply.vandyhacks.com"
+                    href="https://apply.vandyhacks.org"
                     target="_blank"
                     class="place-self-center"
                 >
