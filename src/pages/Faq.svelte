@@ -60,7 +60,7 @@
                     />
                     <FaqItem
                         question="Is there travel reimbursement? How do I apply?"
-                        answer="Travel Reimbursement is now closed. If you have any questions, please email us at info@vandyhacks.org"
+                        answer="The deadline for submitting the travel reimbursement form has passed. You are still more than welcome to attend VandyHacks if you are accepted! However, we are unable to provide further travel reimbursement at this time."
                     />
                     <FaqItem
                         question="Where can I find the Discord invite?"
