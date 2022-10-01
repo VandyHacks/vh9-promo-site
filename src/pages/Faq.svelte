@@ -60,7 +60,7 @@
                     />
                     <FaqItem
                         question="Is there travel reimbursement? How do I apply?"
-                        answer="Hackers need to express interest in travel reimbursement on the VandyHacks application. An additional form will be sent to determine distance, eligibility, and logistics. Restrictions apply! Hackers who complete the form after October 1st will be ineligible for reimbursement"
+                        answer="Travel Reimbursement is now closed. If you have any questions, please email us at info@vandyhacks.org"
                     />
                     <FaqItem
                         question="Where can I find the Discord invite?"
