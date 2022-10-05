@@ -5,7 +5,7 @@
         {
             title: 'Capital One',
             image: 'sponsors/capital_one_logo.png',
-            link: 'https://www.capitalone.com/',
+            link: 'https://campus.capitalone.com/',
         },
         {
             title: 'RStudio',
