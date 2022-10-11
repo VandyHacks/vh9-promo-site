@@ -47,6 +47,11 @@
             image: 'sponsors/google_cloud_logo.png',
             link: 'https://cloud.google.com/',
         },
+        {
+            title: 'Phosphorus',
+            image: 'sponsors/phosphorus_logo.png',
+            link: 'https://phosphorus.io/',
+        },
     ]
 </script>
 
