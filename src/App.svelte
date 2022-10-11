@@ -63,8 +63,8 @@
         },
     }
 
-    let isChrome = Boolean(window.chrome)
-    isAnimationOn.set(isChrome)
+    // let isChrome = Boolean(window.chrome)
+    // isAnimationOn.set(isChrome)
 
     let particlesInit = async (engine) => {
         await loadFull(engine)
@@ -124,7 +124,7 @@
             id="default-toggle"
             class="sr-only peer"
             on:click={toggleAnimation}
-            checked={isChrome}
+            checked={$isAnimationOn}
         />
         <div
             class="w-11 h-6 md:w-14 md:h-8 lg:w-16 lg:h-10

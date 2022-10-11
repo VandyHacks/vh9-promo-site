@@ -14,4 +14,4 @@ export let innerHeightVal = writable(window.innerHeight)
 
 export let isNavbarOpen = writable(false)
 
-export let isAnimationOn = writable(true)
+export let isAnimationOn = writable(false)
