@@ -271,7 +271,9 @@
                             <div
                                 class="grid grid-cols-3 sm:grid-cols-4 divide-x-[1px] divide-black"
                             >
-                                <div class="col-span-2 sm:col-span-3 py-2 pl-4">
+                                <div
+                                    class="col-span-2 sm:col-span-3 py-2 pr-1 pl-4"
+                                >
                                     <div
                                         class="text-sm font-bold md:text-lg lg:text-xl "
                                     >
