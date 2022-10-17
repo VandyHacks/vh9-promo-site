@@ -60,13 +60,13 @@
                 Location: 'ESB 044/048',
                 Time: '3:00 AM - 4:00 AM',
             },
+        ],
+        [
             {
                 Event: "Breakfast (Jason's Deli)",
                 Location: 'ESB Lobby',
                 Time: '8:00 AM - 9:30 AM',
             },
-        ],
-        [
             {
                 Event: 'Resin Pour',
                 Location: 'ESB 044/048',
