@@ -3,25 +3,192 @@
     import Papa from 'papaparse'
 
     let selectedDay = 1
-    let schedules = []
-    let scheduleOfTheDay = ''
-
-    for (let i = 0; i < 3; i++) {
-        Papa.parse(`./schedule/Day${i + 1}.csv`, {
-            download: true,
-            header: true,
-            complete: function (results) {
-                schedules[i] = results.data
-                if (i == 0) {
-                    scheduleOfTheDay = schedules[i]
-                }
+    let schedules = [
+        [
+            {
+                Event: 'Check-in',
+                Location: '',
+                Time: '5:30 PM - 8:00 PM',
             },
-        })
-    }
+            {
+                Event: 'Dinner',
+                Location: 'ESB Lobby',
+                Time: '6:00 PM - 8:00 PM',
+            },
+            {
+                Event: 'Opening Ceremony',
+                Location: 'SLC',
+                Time: '8:00 PM - 9:00 PM',
+            },
+            {
+                Event: 'Team Matching',
+                Location: '',
+                Time: '9:30 PM - 10:00 PM',
+            },
+            {
+                Event: 'Hacking Begins!',
+                Location: '',
+                Time: '10:00 PM',
+            },
+            {
+                Event: 'Introduction to Web Development',
+                Location: 'ESB 044/048',
+                Time: '10:00 PM - 11:00 PM',
+            },
+            {
+                Event: 'Transformers and Applied ML',
+                Location: 'ESB 044/048',
+                Time: '11:00 PM - 12:00 AM',
+            },
+        ],
+        [
+            {
+                Event: "Midnight Snack (Jeni's Ice Cream)",
+                Location: 'ESB Lobby',
+                Time: '12:00 AM - 1:00 AM',
+            },
+            {
+                Event: 'Containerization, Docker and Kubernetes',
+                Location: 'ESB 044/048',
+                Time: '12:00 AM - 1:00 AM',
+            },
+            {
+                Event: 'Data Visualization',
+                Location: 'ESB 044/048',
+                Time: '1:00 AM - 2:00 AM',
+            },
+            {
+                Event: 'Midnight Gaming',
+                Location: 'ESB 044/048',
+                Time: '3:00 AM - 4:00 AM',
+            },
+            {
+                Event: "Breakfast (Jason's Deli)",
+                Location: 'ESB Lobby',
+                Time: '8:00 AM - 9:30 AM',
+            },
+            {
+                Event: 'Resin Pour',
+                Location: 'ESB 044/048',
+                Time: '9:00 AM - 10:00 AM',
+            },
+            {
+                Event: 'Command Line Essentials',
+                Location: 'ESB 044/048',
+                Time: '9:00 AM - 9:30 AM',
+            },
+            {
+                Event: 'Dynamic Programming',
+                Location: 'ESB 044/048',
+                Time: '9:30 AM - 10:00 AM',
+            },
+            {
+                Event: 'Design & Deployment',
+                Location: 'ESB 044/048',
+                Time: '10:00 AM - 11:00 AM',
+            },
+            {
+                Event: "It's On You: CS & Ethics",
+                Location: 'ESB 044/048',
+                Time: '11:00 AM - 12:00 PM',
+            },
+            {
+                Event: 'Boat Building',
+                Location: 'ESB 044/048',
+                Time: '10:30 AM - 1:30 PM',
+            },
+            {
+                Event: "Lunch (Inchin's)",
+                Location: 'ESB Lobby',
+                Time: '12:30 PM - 2:30 PM',
+            },
+            {
+                Event: 'Kickball',
+                Location: 'ESB 044/048',
+                Time: '3:00 PM - 4:00 PM',
+            },
+            {
+                Event: 'Watercolor Painting',
+                Location: 'ESB 044/048',
+                Time: '5:00 PM - 6:00 PM',
+            },
+            {
+                Event: 'Dinner (Blue Coast Burrito)',
+                Location: 'ESB Lobby',
+                Time: '6:00 PM - 7:30 PM',
+            },
+            {
+                Event: 'VR Event',
+                Location: 'ESB 044/048',
+                Time: '7:30 PM - 8:30 PM',
+            },
+            {
+                Event: 'Swag Distribution',
+                Location: 'ESB Lobby',
+                Time: '8:00 PM - 10:00 PM',
+            },
+            {
+                Event: 'Navigating CS Internships Panel',
+                Location: 'ESB 044/048',
+                Time: '9:00 PM - 10:00 PM',
+            },
+            {
+                Event: 'Cookie Decorating',
+                Location: 'ESB Lobby',
+                Time: '10:00 PM - 11:00 PM',
+            },
+        ],
+        [
+            {
+                Event: 'Midnight Snack (Krispy Kreme)',
+                Location: 'ESB Lobby',
+                Time: '12:00 AM - 1:00 AM',
+            },
+            {
+                Event: 'VR Station',
+                Location: 'ESB 044/048',
+                Time: '1:00 AM - 2:00 AM',
+            },
+            {
+                Event: "Breakfast (Jason's Deli)",
+                Location: 'ESB Lobby',
+                Time: '8:00 AM - 9:00 AM',
+            },
+            {
+                Event: 'How to Demo',
+                Location: 'ESB Lobby',
+                Time: '9:00 AM - 10:00 AM',
+            },
+            {
+                Event: 'Career Fair',
+                Location: 'ESB Lobby',
+                Time: '10:00 AM - 1:00 PM',
+            },
+            {
+                Event: "Lunch (Jersey Mike's)",
+                Location: 'ESB Lobby',
+                Time: '11:30 AM - 1:00 PM',
+            },
+            {
+                Event: 'Expo A',
+                Location: 'ESB 044/048',
+                Time: '10:00 AM - 11:00 AM',
+            },
+            {
+                Event: 'Expo B',
+                Location: 'ESB 044/048',
+                Time: '11:30 AM - 12:30 PM',
+            },
+            {
+                Event: 'Closing Ceremony',
+                Location: 'Langford Auditorium',
+                Time: '1:30 PM - 3:00 PM',
+            },
+        ],
+    ]
 
     function getScheduleOfTheDay(day) {
         selectedDay = day
-        scheduleOfTheDay = schedules[day - 1]
 
         // Reset scroll when changing page
         let scheduleBox = document.getElementById('scrollable-content')
@@ -100,7 +267,7 @@
                     </div>
                     <!-- Schedule -->
                     <div class="row-span-6">
-                        {#each scheduleOfTheDay as schedule}
+                        {#each schedules[selectedDay - 1] as schedule}
                             <div
                                 class="grid grid-cols-4 divide-x-[1px] divide-black"
                             >
