@@ -31,12 +31,12 @@
                 Time: '10:00 PM',
             },
             {
-                Event: 'Introduction to Web Development',
+                Event: 'Introduction to Web Development Workshop',
                 Location: 'ESB 044/048',
                 Time: '10:00 PM - 11:00 PM',
             },
             {
-                Event: 'Transformers and Applied ML',
+                Event: 'Transformers and Applied ML Workshop',
                 Location: 'ESB 044/048',
                 Time: '11:00 PM - 12:00 AM',
             },
@@ -46,12 +46,12 @@
                 Time: '12:00 AM - 1:00 AM',
             },
             {
-                Event: 'Containerization, Docker and Kubernetes',
+                Event: 'Containerization, Docker and Kubernetes Workshop',
                 Location: 'ESB 044/048',
                 Time: '12:00 AM - 1:00 AM',
             },
             {
-                Event: 'Data Visualization',
+                Event: 'Data Visualization Workshop',
                 Location: 'ESB 044/048',
                 Time: '1:00 AM - 2:00 AM',
             },
@@ -73,22 +73,22 @@
                 Time: '9:00 AM - 10:00 AM',
             },
             {
-                Event: 'Command Line Essentials',
+                Event: 'Command Line Essentials Workshop',
                 Location: 'ESB 044/048',
                 Time: '9:00 AM - 9:30 AM',
             },
             {
-                Event: 'Dynamic Programming',
+                Event: 'Dynamic Programming Workshop',
                 Location: 'ESB 044/048',
                 Time: '9:30 AM - 10:00 AM',
             },
             {
-                Event: 'Design & Deployment',
+                Event: 'Design & Deployment Workshop',
                 Location: 'ESB 044/048',
                 Time: '10:00 AM - 11:00 AM',
             },
             {
-                Event: "It's On You: CS & Ethics",
+                Event: "It's On You: CS & Ethics Workshop",
                 Location: 'ESB 044/048',
                 Time: '11:00 AM - 12:00 PM',
             },
