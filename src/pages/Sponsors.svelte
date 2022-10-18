@@ -35,7 +35,7 @@
         {
             title: 'Seven Capital Management (SCM)',
             image: 'sponsors/scm_logo.png',
-            link: 'https://www.seven-cm.com/en/',
+            link: 'https://www.scm-lp.com/',
         },
         {
             title: 'Google Cloud',
