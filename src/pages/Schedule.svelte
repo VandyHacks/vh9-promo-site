@@ -113,7 +113,7 @@
                 Time: '5:00 PM - 6:00 PM',
             },
             {
-                Event: 'Dinner (Blue Coast Burrito)',
+                Event: 'Dinner (Two Boots Pizza)',
                 Location: 'ESB Lobby',
                 Time: '6:00 PM - 7:30 PM',
             },
