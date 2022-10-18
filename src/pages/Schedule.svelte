@@ -155,6 +155,11 @@
                 Time: '8:00 AM - 9:00 AM',
             },
             {
+                Event: 'Hacking Ends!',
+                Location: '',
+                Time: '9:00 AM',
+            },
+            {
                 Event: 'How to Demo',
                 Location: 'ESB Lobby',
                 Time: '9:00 AM - 10:00 AM',
