@@ -47,6 +47,11 @@
             image: 'sponsors/phosphorus_logo.png',
             link: 'https://phosphorus.io/',
         },
+        {
+            title: 'Echo 3D',
+            image: 'sponsors/echo3d_logo.png',
+            link: 'https://echo3d.co/',
+        },
     ]
 </script>
 
