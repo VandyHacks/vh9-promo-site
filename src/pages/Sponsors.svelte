@@ -33,11 +33,6 @@
             link: 'https://irongalaxystudios.com/',
         },
         {
-            title: 'TRON',
-            image: 'sponsors/tron_logo.png',
-            link: 'https://tron.network/',
-        },
-        {
             title: 'Seven Capital Management (SCM)',
             image: 'sponsors/scm_logo.png',
             link: 'https://www.seven-cm.com/en/',
