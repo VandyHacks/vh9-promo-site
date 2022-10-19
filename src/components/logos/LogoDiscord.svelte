@@ -1,4 +1,4 @@
-<a href="https://www.discord.com" target="_blank">
+<a href="https://vhl.ink/discord" target="_blank">
     <svg
         width="48"
         height="35"
