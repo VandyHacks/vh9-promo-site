@@ -11,7 +11,7 @@
                 Time: '5:30 PM - 8:00 PM',
             },
             {
-                Event: 'Dinner',
+                Event: 'Dinner (Satay\'s)',
                 Location: 'ESB Lobby',
                 Time: '6:00 PM - 8:00 PM',
             },
