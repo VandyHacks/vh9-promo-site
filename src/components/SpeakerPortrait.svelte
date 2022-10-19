@@ -3,8 +3,8 @@
 
     export let slideNumber = 0
     let slideMax = 2
-    let sources = ['speakers/Dory.png', 'speakers/Nemo.png']
-    let names = ['Dory', 'Nemo']
+    let sources = ['speakers/Deanna.png', 'speakers/Jonathon.png']
+    let names = ['Deanna Meador', 'Jonathon Sprinkle']
 
     export function navigatePotrait(isForward) {
         if (isForward) {
@@ -24,7 +24,7 @@
         <div class="rounded-[50%] w-36 h-36 md:w-48 md:h-48 bg-cyan-300">
             <img
                 id="speaker"
-                class="w-full h-full"
+                class="object-fill w-full h-full rounded-[50%]"
                 src={sources[slideNumber]}
                 alt="Portrait of Speaker"
             />
