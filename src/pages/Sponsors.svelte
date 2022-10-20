@@ -23,11 +23,6 @@
             link: 'https://www.alliancebernstein.com/corporate/en/home.html',
         },
         {
-            title: 'Capgemini',
-            image: 'sponsors/capgemini_logo.png',
-            link: 'https://www.capgemini.com/us-en/',
-        },
-        {
             title: 'Iron Galaxy Studios',
             image: 'sponsors/iron_galaxy_logo.png',
             link: 'https://irongalaxystudios.com/',
