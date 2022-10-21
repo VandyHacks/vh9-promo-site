@@ -8,16 +8,6 @@
             link: 'https://campus.capitalone.com/',
         },
         {
-            title: 'RStudio',
-            image: 'sponsors/rstudio_logo.png',
-            link: 'https://www.rstudio.com/',
-        },
-        {
-            title: 'L3Harris',
-            image: 'sponsors/l3harris_logo.png',
-            link: 'https://www.l3harris.com/',
-        },
-        {
             title: 'Alliance Bernstein',
             image: 'sponsors/alliance_bernstein_logo.png',
             link: 'https://www.alliancebernstein.com/corporate/en/home.html',
@@ -28,14 +18,9 @@
             link: 'https://irongalaxystudios.com/',
         },
         {
-            title: 'Seven Capital Management (SCM)',
-            image: 'sponsors/scm_logo.png',
-            link: 'https://www.scm-lp.com/',
-        },
-        {
-            title: 'Google Cloud',
-            image: 'sponsors/google_cloud_logo.png',
-            link: 'https://cloud.google.com/',
+            title: 'L3Harris',
+            image: 'sponsors/l3harris_logo.png',
+            link: 'https://www.l3harris.com/',
         },
         {
             title: 'Phosphorus',
@@ -43,9 +28,29 @@
             link: 'https://phosphorus.io/',
         },
         {
+            title: 'Seven Capital Management (SCM)',
+            image: 'sponsors/scm_logo.png',
+            link: 'https://www.scm-lp.com/',
+        },
+        {
+            title: 'RStudio',
+            image: 'sponsors/rstudio_logo.png',
+            link: 'https://www.rstudio.com/',
+        },
+        {
             title: 'Echo 3D',
             image: 'sponsors/echo3d_logo.png',
             link: 'https://echo3d.co/',
+        },
+        {
+            title: 'Google Cloud',
+            image: 'sponsors/google_cloud_logo.png',
+            link: 'https://cloud.google.com/',
+        },
+        {
+            title: 'Vesla',
+            image: 'sponsors/vesla_logo.png',
+            link: 'http://justpaste.it/8ity3',
         },
     ]
 </script>
