@@ -94,7 +94,7 @@
             },
             {
                 Event: 'Boat Building',
-                Location: 'ESB 044/048',
+                Location: 'ESB Lobby',
                 Time: '10:30 AM - 1:30 PM',
             },
             {
