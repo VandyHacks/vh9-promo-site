@@ -103,8 +103,8 @@
                 Time: '12:30 PM - 2:30 PM',
             },
             {
-                Event: 'Kickball',
-                Location: 'ESB 044/048',
+                Event: 'Snyk Cybersecurity Challenge',
+                Location: '',
                 Time: '3:00 PM - 4:00 PM',
             },
             {
@@ -118,7 +118,7 @@
                 Time: '6:00 PM - 7:30 PM',
             },
             {
-                Event: 'VR Event',
+                Event: 'MLH Cupstacking',
                 Location: 'ESB 044/048',
                 Time: '7:30 PM - 8:30 PM',
             },
