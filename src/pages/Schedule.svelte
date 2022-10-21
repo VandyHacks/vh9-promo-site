@@ -104,8 +104,13 @@
             },
             {
                 Event: 'Snyk Cybersecurity Challenge',
-                Location: '',
+                Location: 'ESB 044/048',
                 Time: '3:00 PM - 4:00 PM',
+            },
+            {
+                Event: 'Speaker Event With Dr. Sprinkle',
+                Location: 'ESB 044/048',
+                Time: '4:00 PM - 5:00 PM',
             },
             {
                 Event: 'Watercolor Painting',
@@ -119,7 +124,7 @@
             },
             {
                 Event: 'MLH Cupstacking',
-                Location: 'ESB 044/048',
+                Location: 'ESB Lobby',
                 Time: '7:30 PM - 8:30 PM',
             },
             {
