@@ -22,7 +22,7 @@
             },
             {
                 Event: 'Team Matching',
-                Location: '',
+                Location: 'ESB 201 (Floor 2)',
                 Time: '9:30 PM - 10:00 PM',
             },
             {
