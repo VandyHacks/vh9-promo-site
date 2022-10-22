@@ -143,7 +143,7 @@
                 Time: '10:00 PM - 11:00 PM',
             },
             {
-                Event: 'Midnight Snack (Krispy Kreme)',
+                Event: 'Midnight Snack (Jeni\'s Ice Cream)',
                 Location: 'ESB Lobby',
                 Time: '12:00 AM - 1:00 AM',
             },
